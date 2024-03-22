@@ -1,0 +1,2308 @@
+[[package]]
+name = "aiohttp"
+version = "3.9.3"
+description = "Async http client/server framework (asyncio)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+aiosignal = ">=1.1.2"
+async-timeout = {version = ">=4.0,<5.0", markers = "python_version < \"3.11\""}
+attrs = ">=17.3.0"
+frozenlist = ">=1.1.1"
+multidict = ">=4.5,<7.0"
+yarl = ">=1.0,<2.0"
+
+[package.extras]
+speedups = ["brotlicffi", "brotli", "aiodns"]
+
+[[package]]
+name = "aiosignal"
+version = "1.3.1"
+description = "aiosignal: a list of registered asynchronous callbacks"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+frozenlist = ">=1.1.0"
+
+[[package]]
+name = "annotated-types"
+version = "0.6.0"
+description = "Reusable constraint types to use with typing.Annotated"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "anyio"
+version = "4.3.0"
+description = "High level compatibility layer for multiple asynchronous event loop implementations"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+exceptiongroup = {version = ">=1.0.2", markers = "python_version < \"3.11\""}
+idna = ">=2.8"
+sniffio = ">=1.1"
+typing-extensions = {version = ">=4.1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+doc = ["packaging", "Sphinx (>=7)", "sphinx-rtd-theme", "sphinx-autodoc-typehints (>=1.2.0)"]
+test = ["anyio", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "uvloop (>=0.17)"]
+trio = ["trio (>=0.23)"]
+
+[[package]]
+name = "asgiref"
+version = "3.8.0"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
+
+[package.extras]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+
+[[package]]
+name = "async-timeout"
+version = "4.0.3"
+description = "Timeout context manager for asyncio programs"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "atomicwrites"
+version = "1.4.1"
+description = "Atomic file writes."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "attrs"
+version = "23.2.0"
+description = "Classes Without Boilerplate"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+cov = ["attrs", "coverage[toml] (>=5.3)"]
+dev = ["attrs", "pre-commit"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
+tests = ["attrs", "zope-interface"]
+tests-mypy = ["mypy (>=1.6)", "pytest-mypy-plugins"]
+tests-no-zope = ["attrs", "cloudpickle", "hypothesis", "pympler", "pytest-xdist", "pytest (>=4.3.0)"]
+
+[[package]]
+name = "backoff"
+version = "2.2.1"
+description = "Function decoration for backoff and retry"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
+name = "bcrypt"
+version = "4.1.2"
+description = "Modern password hashing for your software and your servers"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+tests = ["pytest (>=3.2.1,!=3.3.0)"]
+typecheck = ["mypy"]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.12.3"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+cchardet = ["cchardet"]
+chardet = ["chardet"]
+charset-normalizer = ["charset-normalizer"]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
+name = "build"
+version = "1.1.1"
+description = "A simple, correct Python build frontend"
+category = "main"
+optional = false
+python-versions = ">= 3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "os_name == \"nt\""}
+importlib-metadata = {version = ">=4.6", markers = "python_full_version < \"3.10.2\""}
+packaging = ">=19.0"
+pyproject_hooks = "*"
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+
+[package.extras]
+docs = ["furo (>=2023.08.17)", "sphinx (>=7.0,<8.0)", "sphinx-argparse-cli (>=1.5)", "sphinx-autodoc-typehints (>=1.10)", "sphinx-issues (>=3.0.0)"]
+test = ["filelock (>=3)", "pytest (>=6.2.4)", "pytest-cov (>=2.12)", "pytest-mock (>=2)", "pytest-rerunfailures (>=9.1)", "pytest-xdist (>=1.34)", "wheel (>=0.36.0)", "setuptools (>=42.0.0)", "setuptools (>=56.0.0)", "setuptools (>=56.0.0)", "setuptools (>=67.8.0)"]
+typing = ["importlib-metadata (>=5.1)", "mypy (>=1.5.0,<1.6.0)", "tomli", "typing-extensions (>=3.7.4.3)"]
+virtualenv = ["virtualenv (>=20.0.35)"]
+
+[[package]]
+name = "cachetools"
+version = "5.3.3"
+description = "Extensible memoizing collections and decorators"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "certifi"
+version = "2024.2.2"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "chardet"
+version = "5.2.0"
+description = "Universal encoding detector for Python 3"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "charset-normalizer"
+version = "3.3.2"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[[package]]
+name = "chroma-hnswlib"
+version = "0.7.3"
+description = "Chromas fork of hnswlib"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = "*"
+
+[[package]]
+name = "chromadb"
+version = "0.4.24"
+description = "Chroma."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+bcrypt = ">=4.0.1"
+build = ">=1.0.3"
+chroma-hnswlib = "0.7.3"
+fastapi = ">=0.95.2"
+grpcio = ">=1.58.0"
+importlib-resources = "*"
+kubernetes = ">=28.1.0"
+mmh3 = ">=4.0.1"
+numpy = ">=1.22.5"
+onnxruntime = ">=1.14.1"
+opentelemetry-api = ">=1.2.0"
+opentelemetry-exporter-otlp-proto-grpc = ">=1.2.0"
+opentelemetry-instrumentation-fastapi = ">=0.41b0"
+opentelemetry-sdk = ">=1.2.0"
+orjson = ">=3.9.12"
+overrides = ">=7.3.1"
+posthog = ">=2.4.0"
+pulsar-client = ">=3.1.0"
+pydantic = ">=1.9"
+pypika = ">=0.48.9"
+PyYAML = ">=6.0.0"
+requests = ">=2.28"
+tenacity = ">=8.2.3"
+tokenizers = ">=0.13.2"
+tqdm = ">=4.65.0"
+typer = ">=0.9.0"
+typing-extensions = ">=4.5.0"
+uvicorn = {version = ">=0.18.3", extras = ["standard"]}
+
+[[package]]
+name = "click"
+version = "8.1.7"
+description = "Composable command line interface toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+description = "Cross-platform colored terminal text."
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+
+[[package]]
+name = "coloredlogs"
+version = "15.0.1"
+description = "Colored terminal output for Python's logging module"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.dependencies]
+humanfriendly = ">=9.1"
+
+[package.extras]
+cron = ["capturer (>=2.4)"]
+
+[[package]]
+name = "dataclasses-json"
+version = "0.6.4"
+description = "Easily serialize dataclasses to and from JSON."
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+marshmallow = ">=3.18.0,<4.0.0"
+typing-inspect = ">=0.4.0,<1"
+
+[[package]]
+name = "dataclasses-json-speakeasy"
+version = "0.5.11"
+description = "Easily serialize dataclasses to and from JSON."
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+marshmallow = ">=3.18.0,<4.0.0"
+typing-inspect = ">=0.4.0,<1"
+
+[[package]]
+name = "deprecated"
+version = "1.2.14"
+description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+wrapt = ">=1.10,<2"
+
+[package.extras]
+dev = ["tox", "pytest", "pytest-cov", "bump2version (<1)", "sphinx (<2)"]
+
+[[package]]
+name = "emoji"
+version = "2.10.1"
+description = "Emoji for Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+dev = ["pytest", "coverage", "coveralls"]
+
+[[package]]
+name = "exceptiongroup"
+version = "1.2.0"
+description = "Backport of PEP 654 (exception groups)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
+name = "fastapi"
+version = "0.110.0"
+description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+pydantic = ">=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0 || >2.0.0,<2.0.1 || >2.0.1,<2.1.0 || >2.1.0,<3.0.0"
+starlette = ">=0.36.3,<0.37.0"
+typing-extensions = ">=4.8.0"
+
+[package.extras]
+all = ["email-validator (>=2.0.0)", "httpx (>=0.23.0)", "itsdangerous (>=1.1.0)", "jinja2 (>=2.11.2)", "orjson (>=3.2.1)", "pydantic-extra-types (>=2.0.0)", "pydantic-settings (>=2.0.0)", "python-multipart (>=0.0.7)", "pyyaml (>=5.3.1)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0)", "uvicorn[standard] (>=0.12.0)"]
+
+[[package]]
+name = "filelock"
+version = "3.13.1"
+description = "A platform independent file lock."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["furo (>=2023.9.10)", "sphinx-autodoc-typehints (>=1.24)", "sphinx (>=7.2.6)"]
+testing = ["covdefaults (>=2.3)", "coverage (>=7.3.2)", "diff-cover (>=8)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)", "pytest-timeout (>=2.2)", "pytest (>=7.4.3)"]
+typing = ["typing-extensions (>=4.8)"]
+
+[[package]]
+name = "filetype"
+version = "1.2.0"
+description = "Infer file type and MIME type of any file/buffer. No external dependencies."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "flatbuffers"
+version = "24.3.7"
+description = "The FlatBuffers serialization format for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "frozenlist"
+version = "1.4.1"
+description = "A list-like structure which implements collections.abc.MutableSequence"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "fsspec"
+version = "2024.3.1"
+description = "File-system specification"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+abfs = ["adlfs"]
+adl = ["adlfs"]
+arrow = ["pyarrow (>=1)"]
+dask = ["dask", "distributed"]
+devel = ["pytest", "pytest-cov"]
+dropbox = ["dropboxdrivefs", "requests", "dropbox"]
+full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "dask", "distributed", "dropbox", "dropboxdrivefs", "fusepy", "gcsfs", "libarchive-c", "ocifs", "panel", "paramiko", "pyarrow (>=1)", "pygit2", "requests", "s3fs", "smbprotocol", "tqdm"]
+fuse = ["fusepy"]
+gcs = ["gcsfs"]
+git = ["pygit2"]
+github = ["requests"]
+gs = ["gcsfs"]
+gui = ["panel"]
+hdfs = ["pyarrow (>=1)"]
+http = ["aiohttp (!=4.0.0a0,!=4.0.0a1)"]
+libarchive = ["libarchive-c"]
+oci = ["ocifs"]
+s3 = ["s3fs"]
+sftp = ["paramiko"]
+smb = ["smbprotocol"]
+ssh = ["paramiko"]
+tqdm = ["tqdm"]
+
+[[package]]
+name = "google-auth"
+version = "2.29.0"
+description = "Google Authentication Library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cachetools = ">=2.0.0,<6.0"
+pyasn1-modules = ">=0.2.1"
+rsa = ">=3.1.4,<5"
+
+[package.extras]
+aiohttp = ["aiohttp (>=3.6.2,<4.0.0.dev0)", "requests (>=2.20.0,<3.0.0.dev0)"]
+enterprise-cert = ["cryptography (==36.0.2)", "pyopenssl (==22.0.0)"]
+pyopenssl = ["pyopenssl (>=20.0.0)", "cryptography (>=38.0.3)"]
+reauth = ["pyu2f (>=0.1.5)"]
+requests = ["requests (>=2.20.0,<3.0.0.dev0)"]
+
+[[package]]
+name = "googleapis-common-protos"
+version = "1.63.0"
+description = "Common protobufs used in Google APIs"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<5.0.0.dev0"
+
+[package.extras]
+grpc = ["grpcio (>=1.44.0,<2.0.0.dev0)"]
+
+[[package]]
+name = "greenlet"
+version = "3.0.3"
+description = "Lightweight in-process concurrent programming"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx", "furo"]
+test = ["objgraph", "psutil"]
+
+[[package]]
+name = "grpcio"
+version = "1.62.1"
+description = "HTTP/2-based RPC framework"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+protobuf = ["grpcio-tools (>=1.62.1)"]
+
+[[package]]
+name = "h11"
+version = "0.14.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "httptools"
+version = "0.6.1"
+description = "A collection of framework independent HTTP protocol utils."
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.extras]
+test = ["Cython (>=0.29.24,<0.30.0)"]
+
+[[package]]
+name = "huggingface-hub"
+version = "0.21.4"
+description = "Client library to download and publish models, datasets and other repos on the huggingface.co hub"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.dependencies]
+filelock = "*"
+fsspec = ">=2023.5.0"
+packaging = ">=20.9"
+pyyaml = ">=5.1"
+requests = "*"
+tqdm = ">=4.42.1"
+typing-extensions = ">=3.7.4.3"
+
+[package.extras]
+all = ["InquirerPy (==0.3.4)", "aiohttp", "jedi", "jinja2", "pytest", "pytest-cov", "pytest-env", "pytest-xdist", "pytest-vcr", "pytest-asyncio", "pytest-rerunfailures", "urllib3 (<2.0)", "soundfile", "pillow", "gradio", "numpy", "ruff (>=0.1.3)", "mypy (==1.5.1)", "typing-extensions (>=4.8.0)", "types-pyyaml", "types-requests", "types-simplejson", "types-toml", "types-tqdm", "types-urllib3", "pydantic (>1.1,<2.0)", "pydantic (>1.1,<3.0)"]
+cli = ["InquirerPy (==0.3.4)"]
+dev = ["InquirerPy (==0.3.4)", "aiohttp", "jedi", "jinja2", "pytest", "pytest-cov", "pytest-env", "pytest-xdist", "pytest-vcr", "pytest-asyncio", "pytest-rerunfailures", "urllib3 (<2.0)", "soundfile", "pillow", "gradio", "numpy", "ruff (>=0.1.3)", "mypy (==1.5.1)", "typing-extensions (>=4.8.0)", "types-pyyaml", "types-requests", "types-simplejson", "types-toml", "types-tqdm", "types-urllib3", "pydantic (>1.1,<2.0)", "pydantic (>1.1,<3.0)"]
+fastai = ["toml", "fastai (>=2.4)", "fastcore (>=1.3.27)"]
+hf_transfer = ["hf-transfer (>=0.1.4)"]
+inference = ["aiohttp", "pydantic (>1.1,<2.0)", "pydantic (>1.1,<3.0)"]
+quality = ["ruff (>=0.1.3)", "mypy (==1.5.1)"]
+tensorflow = ["tensorflow", "pydot", "graphviz"]
+testing = ["InquirerPy (==0.3.4)", "aiohttp", "jedi", "jinja2", "pytest", "pytest-cov", "pytest-env", "pytest-xdist", "pytest-vcr", "pytest-asyncio", "pytest-rerunfailures", "urllib3 (<2.0)", "soundfile", "pillow", "gradio", "numpy", "pydantic (>1.1,<2.0)", "pydantic (>1.1,<3.0)"]
+torch = ["torch", "safetensors"]
+typing = ["typing-extensions (>=4.8.0)", "types-pyyaml", "types-requests", "types-simplejson", "types-toml", "types-tqdm", "types-urllib3"]
+
+[[package]]
+name = "humanfriendly"
+version = "10.0"
+description = "Human friendly output for text interfaces using Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.dependencies]
+pyreadline3 = {version = "*", markers = "sys_platform == \"win32\" and python_version >= \"3.8\""}
+
+[[package]]
+name = "idna"
+version = "3.6"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "importlib-metadata"
+version = "6.11.0"
+description = "Read metadata from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+perf = ["ipython"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
+
+[[package]]
+name = "importlib-resources"
+version = "6.3.2"
+description = "Read resources from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff (>=0.2.1)", "zipp (>=3.17)", "jaraco.collections", "pytest-mypy"]
+
+[[package]]
+name = "jinja2"
+version = "3.1.3"
+description = "A very fast and expressive template engine."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.0"
+
+[package.extras]
+i18n = ["Babel (>=2.7)"]
+
+[[package]]
+name = "joblib"
+version = "1.3.2"
+description = "Lightweight pipelining with Python functions"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "jsonpatch"
+version = "1.33"
+description = "Apply JSON-Patches (RFC 6902)"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*"
+
+[package.dependencies]
+jsonpointer = ">=1.9"
+
+[[package]]
+name = "jsonpath-python"
+version = "1.0.6"
+description = "A more powerful JSONPath implementation in modern python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "jsonpointer"
+version = "2.4"
+description = "Identify specific nodes in a JSON document (RFC 6901)"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*"
+
+[[package]]
+name = "kubernetes"
+version = "29.0.0"
+description = "Kubernetes python client"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+certifi = ">=14.05.14"
+google-auth = ">=1.0.1"
+oauthlib = ">=3.2.2"
+python-dateutil = ">=2.5.3"
+pyyaml = ">=5.4.1"
+requests = "*"
+requests-oauthlib = "*"
+six = ">=1.9.0"
+urllib3 = ">=1.24.2"
+websocket-client = ">=0.32.0,<0.40.0 || >0.40.0,<0.41.0 || >=0.43.0"
+
+[package.extras]
+adal = ["adal (>=1.0.2)"]
+
+[[package]]
+name = "langchain"
+version = "0.1.13"
+description = "Building applications with LLMs through composability"
+category = "main"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+
+[package.dependencies]
+aiohttp = ">=3.8.3,<4.0.0"
+async-timeout = {version = ">=4.0.0,<5.0.0", markers = "python_version < \"3.11\""}
+dataclasses-json = ">=0.5.7,<0.7"
+jsonpatch = ">=1.33,<2.0"
+langchain-community = ">=0.0.29,<0.1"
+langchain-core = ">=0.1.33,<0.2.0"
+langchain-text-splitters = ">=0.0.1,<0.1"
+langsmith = ">=0.1.17,<0.2.0"
+numpy = ">=1,<2"
+pydantic = ">=1,<3"
+PyYAML = ">=5.3"
+requests = ">=2,<3"
+SQLAlchemy = ">=1.4,<3"
+tenacity = ">=8.1.0,<9.0.0"
+
+[package.extras]
+extended-testing = ["aiosqlite (>=0.19.0,<0.20.0)", "aleph-alpha-client (>=2.15.0,<3.0.0)", "anthropic (>=0.3.11,<0.4.0)", "arxiv (>=1.4,<2.0)", "assemblyai (>=0.17.0,<0.18.0)", "atlassian-python-api (>=3.36.0,<4.0.0)", "beautifulsoup4 (>=4,<5)", "bibtexparser (>=1.4.0,<2.0.0)", "cassio (>=0.1.0,<0.2.0)", "chardet (>=5.1.0,<6.0.0)", "cohere (>=4,<5)", "couchbase (>=4.1.9,<5.0.0)", "dashvector (>=1.0.1,<2.0.0)", "databricks-vectorsearch (>=0.21,<0.22)", "datasets (>=2.15.0,<3.0.0)", "dgml-utils (>=0.3.0,<0.4.0)", "esprima (>=4.0.1,<5.0.0)", "faiss-cpu (>=1,<2)", "feedparser (>=6.0.10,<7.0.0)", "fireworks-ai (>=0.9.0,<0.10.0)", "geopandas (>=0.13.1,<0.14.0)", "gitpython (>=3.1.32,<4.0.0)", "google-cloud-documentai (>=2.20.1,<3.0.0)", "gql (>=3.4.1,<4.0.0)", "hologres-vector (>=0.0.6,<0.0.7)", "html2text (>=2020.1.16,<2021.0.0)", "javelin-sdk (>=0.1.8,<0.2.0)", "jinja2 (>=3,<4)", "jq (>=1.4.1,<2.0.0)", "jsonschema (>1)", "langchain-openai (>=0.0.2,<0.1)", "lxml (>=4.9.2,<5.0.0)", "markdownify (>=0.11.6,<0.12.0)", "motor (>=3.3.1,<4.0.0)", "msal (>=1.25.0,<2.0.0)", "mwparserfromhell (>=0.6.4,<0.7.0)", "mwxml (>=0.3.3,<0.4.0)", "newspaper3k (>=0.2.8,<0.3.0)", "numexpr (>=2.8.6,<3.0.0)", "openai (<2)", "openapi-pydantic (>=0.3.2,<0.4.0)", "pandas (>=2.0.1,<3.0.0)", "pdfminer-six (>=20221105,<20221106)", "pgvector (>=0.1.6,<0.2.0)", "praw (>=7.7.1,<8.0.0)", "psychicapi (>=0.8.0,<0.9.0)", "py-trello (>=0.19.0,<0.20.0)", "pymupdf (>=1.22.3,<2.0.0)", "pypdf (>=3.4.0,<4.0.0)", "pypdfium2 (>=4.10.0,<5.0.0)", "pyspark (>=3.4.0,<4.0.0)", "rank-bm25 (>=0.2.2,<0.3.0)", "rapidfuzz (>=3.1.1,<4.0.0)", "rapidocr-onnxruntime (>=1.3.2,<2.0.0)", "rdflib (==7.0.0)", "requests-toolbelt (>=1.0.0,<2.0.0)", "rspace_client (>=2.5.0,<3.0.0)", "scikit-learn (>=1.2.2,<2.0.0)", "sqlite-vss (>=0.1.2,<0.2.0)", "streamlit (>=1.18.0,<2.0.0)", "sympy (>=1.12,<2.0)", "telethon (>=1.28.5,<2.0.0)", "timescale-vector (>=0.0.1,<0.0.2)", "tqdm (>=4.48.0)", "upstash-redis (>=0.15.0,<0.16.0)", "xata (>=1.0.0a7,<2.0.0)", "xmltodict (>=0.13.0,<0.14.0)"]
+azure = ["azure-ai-formrecognizer (>=3.2.1,<4.0.0)", "azure-ai-textanalytics (>=5.3.0,<6.0.0)", "azure-cognitiveservices-speech (>=1.28.0,<2.0.0)", "azure-core (>=1.26.4,<2.0.0)", "azure-cosmos (>=4.4.0b1,<5.0.0)", "azure-identity (>=1.12.0,<2.0.0)", "azure-search-documents (==11.4.0b8)", "openai (<2)"]
+text-helpers = ["chardet (>=5.1.0,<6.0.0)"]
+llms = ["clarifai (>=9.1.0)", "cohere (>=4,<5)", "huggingface_hub (>=0,<1)", "manifest-ml (>=0.0.1,<0.0.2)", "nlpcloud (>=1,<2)", "openai (<2)", "openlm (>=0.0.5,<0.0.6)", "torch (>=1,<3)", "transformers (>=4,<5)"]
+clarifai = ["clarifai (>=9.1.0)"]
+cohere = ["cohere (>=4,<5)"]
+docarray = ["docarray[hnswlib] (>=0.32.0,<0.33.0)"]
+javascript = ["esprima (>=4.0.1,<5.0.0)"]
+openai = ["openai (<2)", "tiktoken (>=0.3.2,<0.6.0)"]
+qdrant = ["qdrant-client (>=1.3.1,<2.0.0)"]
+embeddings = ["sentence-transformers (>=2,<3)"]
+cli = ["typer (>=0.9.0,<0.10.0)"]
+
+[[package]]
+name = "langchain-community"
+version = "0.0.29"
+description = "Community contributed LangChain integrations."
+category = "main"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+
+[package.dependencies]
+aiohttp = ">=3.8.3,<4.0.0"
+dataclasses-json = ">=0.5.7,<0.7"
+langchain-core = ">=0.1.33,<0.2.0"
+langsmith = ">=0.1.0,<0.2.0"
+numpy = ">=1,<2"
+PyYAML = ">=5.3"
+requests = ">=2,<3"
+SQLAlchemy = ">=1.4,<3"
+tenacity = ">=8.1.0,<9.0.0"
+
+[package.extras]
+extended-testing = ["aiosqlite (>=0.19.0,<0.20.0)", "aleph-alpha-client (>=2.15.0,<3.0.0)", "anthropic (>=0.3.11,<0.4.0)", "arxiv (>=1.4,<2.0)", "assemblyai (>=0.17.0,<0.18.0)", "atlassian-python-api (>=3.36.0,<4.0.0)", "azure-ai-documentintelligence (>=1.0.0b1,<2.0.0)", "beautifulsoup4 (>=4,<5)", "bibtexparser (>=1.4.0,<2.0.0)", "cassio (>=0.1.0,<0.2.0)", "chardet (>=5.1.0,<6.0.0)", "cloudpickle (>=2.0.0)", "cohere (>=4,<5)", "databricks-vectorsearch (>=0.21,<0.22)", "datasets (>=2.15.0,<3.0.0)", "dgml-utils (>=0.3.0,<0.4.0)", "elasticsearch (>=8.12.0,<9.0.0)", "esprima (>=4.0.1,<5.0.0)", "faiss-cpu (>=1,<2)", "feedparser (>=6.0.10,<7.0.0)", "fireworks-ai (>=0.9.0,<0.10.0)", "friendli-client (>=1.2.4,<2.0.0)", "geopandas (>=0.13.1,<0.14.0)", "gitpython (>=3.1.32,<4.0.0)", "google-cloud-documentai (>=2.20.1,<3.0.0)", "gql (>=3.4.1,<4.0.0)", "gradientai (>=1.4.0,<2.0.0)", "hdbcli (>=2.19.21,<3.0.0)", "hologres-vector (>=0.0.6,<0.0.7)", "html2text (>=2020.1.16,<2021.0.0)", "httpx (>=0.24.1,<0.25.0)", "javelin-sdk (>=0.1.8,<0.2.0)", "jinja2 (>=3,<4)", "jq (>=1.4.1,<2.0.0)", "jsonschema (>1)", "lxml (>=4.9.2,<5.0.0)", "markdownify (>=0.11.6,<0.12.0)", "motor (>=3.3.1,<4.0.0)", "msal (>=1.25.0,<2.0.0)", "mwparserfromhell (>=0.6.4,<0.7.0)", "mwxml (>=0.3.3,<0.4.0)", "newspaper3k (>=0.2.8,<0.3.0)", "numexpr (>=2.8.6,<3.0.0)", "nvidia-riva-client (>=2.14.0,<3.0.0)", "oci (>=2.119.1,<3.0.0)", "openai (<2)", "openapi-pydantic (>=0.3.2,<0.4.0)", "oracle-ads (>=2.9.1,<3.0.0)", "pandas (>=2.0.1,<3.0.0)", "pdfminer-six (>=20221105,<20221106)", "pgvector (>=0.1.6,<0.2.0)", "praw (>=7.7.1,<8.0.0)", "psychicapi (>=0.8.0,<0.9.0)", "py-trello (>=0.19.0,<0.20.0)", "pymupdf (>=1.22.3,<2.0.0)", "pypdf (>=3.4.0,<4.0.0)", "pypdfium2 (>=4.10.0,<5.0.0)", "pyspark (>=3.4.0,<4.0.0)", "rank-bm25 (>=0.2.2,<0.3.0)", "rapidfuzz (>=3.1.1,<4.0.0)", "rapidocr-onnxruntime (>=1.3.2,<2.0.0)", "rdflib (==7.0.0)", "requests-toolbelt (>=1.0.0,<2.0.0)", "rspace_client (>=2.5.0,<3.0.0)", "scikit-learn (>=1.2.2,<2.0.0)", "sqlite-vss (>=0.1.2,<0.2.0)", "streamlit (>=1.18.0,<2.0.0)", "sympy (>=1.12,<2.0)", "telethon (>=1.28.5,<2.0.0)", "tidb-vector (>=0.0.3,<1.0.0)", "timescale-vector (>=0.0.1,<0.0.2)", "tqdm (>=4.48.0)", "tree-sitter (>=0.20.2,<0.21.0)", "tree-sitter-languages (>=1.8.0,<2.0.0)", "upstash-redis (>=0.15.0,<0.16.0)", "xata (>=1.0.0a7,<2.0.0)", "xmltodict (>=0.13.0,<0.14.0)", "zhipuai (>=1.0.7,<2.0.0)"]
+cli = ["typer (>=0.9.0,<0.10.0)"]
+
+[[package]]
+name = "langchain-core"
+version = "0.1.33"
+description = "Building applications with LLMs through composability"
+category = "main"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+
+[package.dependencies]
+anyio = ">=3,<5"
+jsonpatch = ">=1.33,<2.0"
+langsmith = ">=0.1.0,<0.2.0"
+packaging = ">=23.2,<24.0"
+pydantic = ">=1,<3"
+PyYAML = ">=5.3"
+requests = ">=2,<3"
+tenacity = ">=8.1.0,<9.0.0"
+
+[package.extras]
+extended-testing = ["jinja2 (>=3,<4)"]
+
+[[package]]
+name = "langchain-experimental"
+version = "0.0.55"
+description = "Building applications with LLMs through composability"
+category = "main"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+
+[package.dependencies]
+langchain = ">=0.1.13,<0.2.0"
+langchain-core = ">=0.1.33,<0.2.0"
+
+[package.extras]
+extended-testing = ["faker (>=19.3.1,<20.0.0)", "jinja2 (>=3,<4)", "pandas (>=2.0.1,<3.0.0)", "presidio-analyzer (>=2.2.352,<3.0.0)", "presidio-anonymizer (>=2.2.352,<3.0.0)", "sentence-transformers (>=2,<3)", "tabulate (>=0.9.0,<0.10.0)", "vowpal-wabbit-next (==0.6.0)"]
+
+[[package]]
+name = "langchain-text-splitters"
+version = "0.0.1"
+description = "LangChain text splitting utilities"
+category = "main"
+optional = false
+python-versions = ">=3.8.1,<4.0"
+
+[package.dependencies]
+langchain-core = ">=0.1.28,<0.2.0"
+
+[package.extras]
+extended-testing = ["lxml (>=5.1.0,<6.0.0)"]
+
+[[package]]
+name = "langdetect"
+version = "1.0.9"
+description = "Language detection library ported from Google's language-detection."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+name = "langsmith"
+version = "0.1.31"
+description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform."
+category = "main"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+
+[package.dependencies]
+orjson = ">=3.9.14,<4.0.0"
+pydantic = ">=1,<3"
+requests = ">=2,<3"
+
+[[package]]
+name = "lxml"
+version = "5.1.0"
+description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+cssselect = ["cssselect (>=0.7)"]
+html5 = ["html5lib"]
+htmlsoup = ["beautifulsoup4"]
+source = ["Cython (>=3.0.7)"]
+
+[[package]]
+name = "markdown"
+version = "3.6"
+description = "Python implementation of John Gruber's Markdown."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["mkdocs (>=1.5)", "mkdocs-nature (>=0.6)", "mdx-gh-links (>=0.2)", "mkdocstrings", "mkdocs-gen-files", "mkdocs-section-index", "mkdocs-literate-nav"]
+testing = ["coverage", "pyyaml"]
+
+[[package]]
+name = "markupsafe"
+version = "2.1.5"
+description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "marshmallow"
+version = "3.20.2"
+description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+packaging = ">=17.0"
+
+[package.extras]
+dev = ["pytest", "pytz", "simplejson", "pre-commit (>=2.4,<4.0)", "tox"]
+docs = ["sphinx (==7.2.6)", "sphinx-issues (==3.0.1)", "alabaster (==0.7.15)", "sphinx-version-warning (==1.1.2)", "autodocsumm (==0.2.12)"]
+lint = ["pre-commit (>=2.4,<4.0)"]
+tests = ["pytest", "pytz", "simplejson"]
+
+[[package]]
+name = "mmh3"
+version = "4.1.0"
+description = "Python extension for MurmurHash (MurmurHash3), a set of fast and robust hash functions."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+test = ["mypy (>=1.0)", "pytest (>=7.0.0)"]
+
+[[package]]
+name = "monotonic"
+version = "1.6"
+description = "An implementation of time.monotonic() for Python 2 & < 3.3"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "more-itertools"
+version = "10.2.0"
+description = "More routines for operating on iterables, beyond itertools"
+category = "dev"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "mpmath"
+version = "1.3.0"
+description = "Python library for arbitrary-precision floating-point arithmetic"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+develop = ["pytest (>=4.6)", "pycodestyle", "pytest-cov", "codecov", "wheel"]
+docs = ["sphinx"]
+gmpy = ["gmpy2 (>=2.1.0a4)"]
+tests = ["pytest (>=4.6)"]
+
+[[package]]
+name = "multidict"
+version = "6.0.5"
+description = "multidict implementation"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "mypy-extensions"
+version = "1.0.0"
+description = "Type system extensions for programs checked with the mypy type checker."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "networkx"
+version = "3.2.1"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.extras]
+default = ["numpy (>=1.22)", "scipy (>=1.9,!=1.11.0,!=1.11.1)", "matplotlib (>=3.5)", "pandas (>=1.4)"]
+developer = ["changelist (==0.4)", "pre-commit (>=3.2)", "mypy (>=1.1)", "rtoml"]
+doc = ["sphinx (>=7)", "pydata-sphinx-theme (>=0.14)", "sphinx-gallery (>=0.14)", "numpydoc (>=1.6)", "pillow (>=9.4)", "nb2plots (>=0.7)", "texext (>=0.6.7)", "nbconvert (<7.9)"]
+extra = ["lxml (>=4.6)", "pygraphviz (>=1.11)", "pydot (>=1.4.2)", "sympy (>=1.10)"]
+test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
+
+[[package]]
+name = "nltk"
+version = "3.8.1"
+description = "Natural Language Toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+click = "*"
+joblib = "*"
+regex = ">=2021.8.3"
+tqdm = "*"
+
+[package.extras]
+all = ["scikit-learn", "python-crfsuite", "requests", "numpy", "pyparsing", "twython", "scipy", "matplotlib"]
+corenlp = ["requests"]
+machine_learning = ["numpy", "python-crfsuite", "scikit-learn", "scipy"]
+plot = ["matplotlib"]
+tgrep = ["pyparsing"]
+twitter = ["twython"]
+
+[[package]]
+name = "numpy"
+version = "1.26.4"
+description = "Fundamental package for array computing in Python"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[[package]]
+name = "nvidia-cublas-cu12"
+version = "12.1.3.1"
+description = "CUBLAS native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-cuda-cupti-cu12"
+version = "12.1.105"
+description = "CUDA profiling tools runtime libs."
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-cuda-nvrtc-cu12"
+version = "12.1.105"
+description = "NVRTC native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-cuda-runtime-cu12"
+version = "12.1.105"
+description = "CUDA Runtime native Libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-cudnn-cu12"
+version = "8.9.2.26"
+description = "cuDNN runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+nvidia-cublas-cu12 = "*"
+
+[[package]]
+name = "nvidia-cufft-cu12"
+version = "11.0.2.54"
+description = "CUFFT native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-curand-cu12"
+version = "10.3.2.106"
+description = "CURAND native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-cusolver-cu12"
+version = "11.4.5.107"
+description = "CUDA solver native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+nvidia-cublas-cu12 = "*"
+nvidia-cusparse-cu12 = "*"
+nvidia-nvjitlink-cu12 = "*"
+
+[[package]]
+name = "nvidia-cusparse-cu12"
+version = "12.1.0.106"
+description = "CUSPARSE native runtime libraries"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+nvidia-nvjitlink-cu12 = "*"
+
+[[package]]
+name = "nvidia-nccl-cu12"
+version = "2.19.3"
+description = "NVIDIA Collective Communication Library (NCCL) Runtime"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-nvjitlink-cu12"
+version = "12.4.99"
+description = "Nvidia JIT LTO Library"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "nvidia-nvtx-cu12"
+version = "12.1.105"
+description = "NVIDIA Tools Extension"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[[package]]
+name = "oauthlib"
+version = "3.2.2"
+description = "A generic, spec-compliant, thorough implementation of the OAuth request-signing logic"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+rsa = ["cryptography (>=3.0.0)"]
+signals = ["blinker (>=1.4.0)"]
+signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
+
+[[package]]
+name = "onnxruntime"
+version = "1.17.1"
+description = "ONNX Runtime is a runtime accelerator for Machine Learning models"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+coloredlogs = "*"
+flatbuffers = "*"
+numpy = ">=1.21.6"
+packaging = "*"
+protobuf = "*"
+sympy = "*"
+
+[[package]]
+name = "opentelemetry-api"
+version = "1.23.0"
+description = "OpenTelemetry Python API"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2.6"
+importlib-metadata = ">=6.0,<7.0"
+
+[[package]]
+name = "opentelemetry-exporter-otlp-proto-common"
+version = "1.23.0"
+description = "OpenTelemetry Protobuf encoding"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-proto = "1.23.0"
+
+[[package]]
+name = "opentelemetry-exporter-otlp-proto-grpc"
+version = "1.23.0"
+description = "OpenTelemetry Collector Protobuf over gRPC Exporter"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2.6"
+googleapis-common-protos = ">=1.52,<2.0"
+grpcio = ">=1.0.0,<2.0.0"
+opentelemetry-api = ">=1.15,<2.0"
+opentelemetry-exporter-otlp-proto-common = "1.23.0"
+opentelemetry-proto = "1.23.0"
+opentelemetry-sdk = ">=1.23.0,<1.24.0"
+
+[package.extras]
+test = ["pytest-grpc"]
+
+[[package]]
+name = "opentelemetry-instrumentation"
+version = "0.44b0"
+description = "Instrumentation Tools & Auto Instrumentation for OpenTelemetry Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-api = ">=1.4,<2.0"
+wrapt = ">=1.0.0,<2.0.0"
+
+[[package]]
+name = "opentelemetry-instrumentation-asgi"
+version = "0.44b0"
+description = "ASGI instrumentation for OpenTelemetry"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+asgiref = ">=3.0,<4.0"
+opentelemetry-api = ">=1.12,<2.0"
+opentelemetry-instrumentation = "0.44b0"
+opentelemetry-semantic-conventions = "0.44b0"
+opentelemetry-util-http = "0.44b0"
+
+[package.extras]
+instruments = ["asgiref (>=3.0,<4.0)"]
+test = ["opentelemetry-instrumentation-asgi", "opentelemetry-test-utils (==0.44b0)"]
+
+[[package]]
+name = "opentelemetry-instrumentation-fastapi"
+version = "0.44b0"
+description = "OpenTelemetry FastAPI Instrumentation"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-api = ">=1.12,<2.0"
+opentelemetry-instrumentation = "0.44b0"
+opentelemetry-instrumentation-asgi = "0.44b0"
+opentelemetry-semantic-conventions = "0.44b0"
+opentelemetry-util-http = "0.44b0"
+
+[package.extras]
+instruments = ["fastapi (>=0.58,<1.0)"]
+test = ["httpx (>=0.22,<1.0)", "opentelemetry-instrumentation-fastapi", "opentelemetry-test-utils (==0.44b0)", "requests (>=2.23,<3.0)"]
+
+[[package]]
+name = "opentelemetry-proto"
+version = "1.23.0"
+description = "OpenTelemetry Python Proto"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+protobuf = ">=3.19,<5.0"
+
+[[package]]
+name = "opentelemetry-sdk"
+version = "1.23.0"
+description = "OpenTelemetry Python SDK"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-api = "1.23.0"
+opentelemetry-semantic-conventions = "0.44b0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
+name = "opentelemetry-semantic-conventions"
+version = "0.44b0"
+description = "OpenTelemetry Semantic Conventions"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "opentelemetry-util-http"
+version = "0.44b0"
+description = "Web util for OpenTelemetry"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "orjson"
+version = "3.9.15"
+description = "Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "overrides"
+version = "7.7.0"
+description = "A decorator to automatically detect mismatch when overriding a method."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "packaging"
+version = "23.2"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "pillow"
+version = "10.2.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-removed-in", "sphinxext-opengraph"]
+fpx = ["olefile"]
+mic = ["olefile"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+typing = ["typing-extensions"]
+xmp = ["defusedxml"]
+
+[[package]]
+name = "pluggy"
+version = "0.13.1"
+description = "plugin and hook calling mechanisms for python"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+
+[[package]]
+name = "posthog"
+version = "3.5.0"
+description = "Integrate PostHog into any python application."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+backoff = ">=1.10.0"
+monotonic = ">=1.5"
+python-dateutil = ">2.1"
+requests = ">=2.7,<3.0"
+six = ">=1.5"
+
+[package.extras]
+dev = ["black", "isort", "flake8", "flake8-print", "pre-commit"]
+sentry = ["sentry-sdk", "django"]
+test = ["mock (>=2.0.0)", "freezegun (==0.3.15)", "pylint", "flake8", "coverage", "pytest", "pytest-timeout"]
+
+[[package]]
+name = "protobuf"
+version = "4.25.3"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "pulsar-client"
+version = "3.4.0"
+description = "Apache Pulsar Python client library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+certifi = "*"
+
+[package.extras]
+all = ["apache-bookkeeper-client (>=4.16.1)", "fastavro (>=1.9.2)", "grpcio (>=1.60.0)", "prometheus-client", "protobuf (>=3.6.1,<=3.20.3)", "ratelimit"]
+avro = ["fastavro (>=1.9.2)"]
+functions = ["apache-bookkeeper-client (>=4.16.1)", "grpcio (>=1.60.0)", "prometheus-client", "protobuf (>=3.6.1,<=3.20.3)", "ratelimit"]
+
+[[package]]
+name = "py"
+version = "1.11.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pyasn1"
+version = "0.5.1"
+description = "Pure-Python implementation of ASN.1 types and DER/BER/CER codecs (X.208)"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
+
+[[package]]
+name = "pyasn1-modules"
+version = "0.3.0"
+description = "A collection of ASN.1-based protocols modules"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
+
+[package.dependencies]
+pyasn1 = ">=0.4.6,<0.6.0"
+
+[[package]]
+name = "pydantic"
+version = "2.6.4"
+description = "Data validation using Python type hints"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+annotated-types = ">=0.4.0"
+pydantic-core = "2.16.3"
+typing-extensions = ">=4.6.1"
+
+[package.extras]
+email = ["email-validator (>=2.0.0)"]
+
+[[package]]
+name = "pydantic-core"
+version = "2.16.3"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
+
+[[package]]
+name = "pypika"
+version = "0.48.9"
+description = "A SQL query builder API for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pyproject-hooks"
+version = "1.0.0"
+description = "Wrappers to call pyproject.toml-based build backend hooks."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+
+[[package]]
+name = "pyreadline3"
+version = "3.4.1"
+description = "A python implementation of GNU readline."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pytest"
+version = "5.4.3"
+description = "pytest: simple powerful testing with Python"
+category = "dev"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+atomicwrites = {version = ">=1.0", markers = "sys_platform == \"win32\""}
+attrs = ">=17.4.0"
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+more-itertools = ">=4.0.0"
+packaging = "*"
+pluggy = ">=0.12,<1.0"
+py = ">=1.5.0"
+wcwidth = "*"
+
+[package.extras]
+checkqa-mypy = ["mypy (==v0.761)"]
+testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
+
+[[package]]
+name = "python-dateutil"
+version = "2.8.2"
+description = "Extensions to the standard Python datetime module"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
+name = "python-iso639"
+version = "2024.2.7"
+description = "Look-up utilities for ISO 639 language codes and names"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["black (==24.1.1)", "build (==1.0.3)", "flake8 (==7.0.0)", "pytest (==8.0.0)", "twine (==4.0.2)"]
+
+[[package]]
+name = "python-magic"
+version = "0.4.27"
+description = "File type identification using libmagic"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pyyaml"
+version = "6.0.1"
+description = "YAML parser and emitter for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "rapidfuzz"
+version = "3.6.1"
+description = "rapid fuzzy string matching"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+full = ["numpy"]
+
+[[package]]
+name = "regex"
+version = "2023.12.25"
+description = "Alternative regular expression module, to replace re."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "requests"
+version = "2.31.0"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<4"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<3"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "requests-oauthlib"
+version = "1.4.0"
+description = "OAuthlib authentication support for Requests."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+oauthlib = ">=3.0.0"
+requests = ">=2.0.0"
+
+[package.extras]
+rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
+
+[[package]]
+name = "rsa"
+version = "4.9"
+description = "Pure-Python RSA implementation"
+category = "main"
+optional = false
+python-versions = ">=3.6,<4"
+
+[package.dependencies]
+pyasn1 = ">=0.1.3"
+
+[[package]]
+name = "safetensors"
+version = "0.4.2"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+numpy = ["numpy (>=1.21.6)"]
+torch = ["safetensors", "torch (>=1.10)"]
+tensorflow = ["safetensors", "tensorflow (>=2.11.0)"]
+pinned-tf = ["safetensors", "tensorflow (==2.11.0)"]
+jax = ["safetensors", "flax (>=0.6.3)", "jax (>=0.3.25)", "jaxlib (>=0.3.25)"]
+mlx = ["mlx (>=0.0.9)"]
+paddlepaddle = ["safetensors", "paddlepaddle (>=2.4.1)"]
+quality = ["black (==22.3)", "click (==8.0.4)", "isort (>=5.5.4)", "flake8 (>=3.8.3)"]
+testing = ["safetensors", "h5py (>=3.7.0)", "huggingface_hub (>=0.12.1)", "setuptools_rust (>=1.5.2)", "pytest (>=7.2.0)", "pytest-benchmark (>=4.0.0)", "hypothesis (>=6.70.2)"]
+all = ["safetensors", "safetensors", "safetensors", "safetensors", "safetensors", "safetensors", "safetensors"]
+dev = ["safetensors"]
+
+[[package]]
+name = "scikit-learn"
+version = "1.4.1.post1"
+description = "A set of python modules for machine learning and data mining"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.dependencies]
+joblib = ">=1.2.0"
+numpy = ">=1.19.5,<2.0"
+scipy = ">=1.6.0"
+threadpoolctl = ">=2.0.0"
+
+[package.extras]
+benchmark = ["matplotlib (>=3.3.4)", "pandas (>=1.1.5)", "memory-profiler (>=0.57.0)"]
+docs = ["matplotlib (>=3.3.4)", "scikit-image (>=0.17.2)", "pandas (>=1.1.5)", "seaborn (>=0.9.0)", "memory-profiler (>=0.57.0)", "sphinx (>=6.0.0)", "sphinx-copybutton (>=0.5.2)", "sphinx-gallery (>=0.15.0)", "numpydoc (>=1.2.0)", "Pillow (>=7.1.2)", "pooch (>=1.6.0)", "sphinx-prompt (>=1.3.0)", "sphinxext-opengraph (>=0.4.2)", "plotly (>=5.14.0)"]
+examples = ["matplotlib (>=3.3.4)", "scikit-image (>=0.17.2)", "pandas (>=1.1.5)", "seaborn (>=0.9.0)", "pooch (>=1.6.0)", "plotly (>=5.14.0)"]
+tests = ["matplotlib (>=3.3.4)", "scikit-image (>=0.17.2)", "pandas (>=1.1.5)", "pytest (>=7.1.2)", "pytest-cov (>=2.9.0)", "ruff (>=0.0.272)", "black (>=23.3.0)", "mypy (>=1.3)", "pyamg (>=4.0.0)", "polars (>=0.19.12)", "pyarrow (>=12.0.0)", "numpydoc (>=1.2.0)", "pooch (>=1.6.0)"]
+
+[[package]]
+name = "scipy"
+version = "1.12.0"
+description = "Fundamental algorithms for scientific computing in Python"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.dependencies]
+numpy = ">=1.22.4,<1.29.0"
+
+[package.extras]
+test = ["pytest", "pytest-cov", "pytest-timeout", "pytest-xdist", "asv", "mpmath", "gmpy2", "threadpoolctl", "scikit-umfpack", "pooch", "hypothesis"]
+doc = ["sphinx (!=4.1.0)", "pydata-sphinx-theme (==0.9.0)", "sphinx-design (>=0.2.0)", "matplotlib (>2)", "numpydoc", "jupytext", "myst-nb", "pooch"]
+dev = ["mypy", "typing-extensions", "types-psutil", "pycodestyle", "ruff", "cython-lint (>=0.12.2)", "rich-click", "click", "doit (>=0.36.0)", "pydevtool"]
+
+[[package]]
+name = "sentence-transformers"
+version = "2.5.1"
+description = "Multilingual text embeddings"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.dependencies]
+huggingface-hub = ">=0.15.1"
+numpy = "*"
+Pillow = "*"
+scikit-learn = "*"
+scipy = "*"
+torch = ">=1.11.0"
+tqdm = "*"
+transformers = ">=4.32.0,<5.0.0"
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "sniffio"
+version = "1.3.1"
+description = "Sniff out which async library your code is running under"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "soupsieve"
+version = "2.5"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "sqlalchemy"
+version = "2.0.28"
+description = "Database Abstraction Library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+greenlet = {version = "!=0.4.17", markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\""}
+typing-extensions = ">=4.6.0"
+
+[package.extras]
+asyncio = ["greenlet (!=0.4.17)"]
+mypy = ["mypy (>=0.910)"]
+mssql = ["pyodbc"]
+mssql-pymssql = ["pymssql"]
+mssql-pyodbc = ["pyodbc"]
+mysql = ["mysqlclient (>=1.4.0)"]
+mysql-connector = ["mysql-connector-python"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2,!=1.1.5)"]
+oracle = ["cx_oracle (>=8)"]
+oracle-oracledb = ["oracledb (>=1.0.1)"]
+postgresql = ["psycopg2 (>=2.7)"]
+postgresql-pg8000 = ["pg8000 (>=1.29.1)"]
+postgresql-asyncpg = ["greenlet (!=0.4.17)", "asyncpg"]
+postgresql-psycopg2binary = ["psycopg2-binary"]
+postgresql-psycopg2cffi = ["psycopg2cffi"]
+postgresql-psycopg = ["psycopg (>=3.0.7)"]
+postgresql-psycopgbinary = ["psycopg[binary] (>=3.0.7)"]
+pymysql = ["pymysql"]
+aiomysql = ["greenlet (!=0.4.17)", "aiomysql (>=0.2.0)"]
+aioodbc = ["greenlet (!=0.4.17)", "aioodbc"]
+asyncmy = ["greenlet (!=0.4.17)", "asyncmy (>=0.2.3,!=0.2.4,!=0.2.6)"]
+aiosqlite = ["greenlet (!=0.4.17)", "aiosqlite", "typing_extensions (!=3.10.0.1)"]
+sqlcipher = ["sqlcipher3-binary"]
+
+[[package]]
+name = "starlette"
+version = "0.36.3"
+description = "The little ASGI library that shines."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+anyio = ">=3.4.0,<5"
+
+[package.extras]
+full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7)", "pyyaml"]
+
+[[package]]
+name = "sympy"
+version = "1.12"
+description = "Computer algebra system (CAS) in Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+mpmath = ">=0.19"
+
+[[package]]
+name = "tabulate"
+version = "0.9.0"
+description = "Pretty-print tabular data"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+widechars = ["wcwidth"]
+
+[[package]]
+name = "tenacity"
+version = "8.2.3"
+description = "Retry code until it succeeds"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+doc = ["reno", "sphinx", "tornado (>=4.5)"]
+
+[[package]]
+name = "threadpoolctl"
+version = "3.4.0"
+description = "threadpoolctl"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "tokenizers"
+version = "0.15.2"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+huggingface_hub = ">=0.16.4,<1.0"
+
+[package.extras]
+testing = ["pytest", "requests", "numpy", "datasets", "black (==22.3)"]
+docs = ["sphinx", "sphinx-rtd-theme", "setuptools-rust"]
+dev = ["tokenizers"]
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "torch"
+version = "2.2.1"
+description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.dependencies]
+filelock = "*"
+fsspec = "*"
+jinja2 = "*"
+networkx = "*"
+nvidia-cublas-cu12 = {version = "12.1.3.1", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cuda-cupti-cu12 = {version = "12.1.105", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cuda-nvrtc-cu12 = {version = "12.1.105", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cuda-runtime-cu12 = {version = "12.1.105", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cudnn-cu12 = {version = "8.9.2.26", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cufft-cu12 = {version = "11.0.2.54", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-curand-cu12 = {version = "10.3.2.106", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cusolver-cu12 = {version = "11.4.5.107", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-cusparse-cu12 = {version = "12.1.0.106", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-nccl-cu12 = {version = "2.19.3", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+nvidia-nvtx-cu12 = {version = "12.1.105", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\""}
+sympy = "*"
+triton = {version = "2.2.0", markers = "platform_system == \"Linux\" and platform_machine == \"x86_64\" and python_version < \"3.12\""}
+typing-extensions = ">=4.8.0"
+
+[package.extras]
+opt-einsum = ["opt-einsum (>=3.3)"]
+optree = ["optree (>=0.9.1)"]
+
+[[package]]
+name = "tqdm"
+version = "4.66.2"
+description = "Fast, Extensible Progress Meter"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["pytest (>=6)", "pytest-cov", "pytest-timeout", "pytest-xdist"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[[package]]
+name = "transformers"
+version = "4.38.2"
+description = "State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.dependencies]
+filelock = "*"
+huggingface-hub = ">=0.19.3,<1.0"
+numpy = ">=1.17"
+packaging = ">=20.0"
+pyyaml = ">=5.1"
+regex = "!=2019.12.17"
+requests = "*"
+safetensors = ">=0.4.1"
+tokenizers = ">=0.14,<0.19"
+tqdm = ">=4.27"
+
+[package.extras]
+accelerate = ["accelerate (>=0.21.0)"]
+agents = ["diffusers", "accelerate (>=0.21.0)", "datasets (!=2.5.0)", "torch", "sentencepiece (>=0.1.91,!=0.1.92)", "opencv-python", "Pillow (>=10.0.1,<=15.0)"]
+all = ["tensorflow (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)", "torch", "accelerate (>=0.21.0)", "jax (>=0.4.1,<=0.4.13)", "jaxlib (>=0.4.1,<=0.4.13)", "flax (>=0.4.1,<=0.7.0)", "optax (>=0.0.8,<=0.1.4)", "sentencepiece (>=0.1.91,!=0.1.92)", "protobuf", "tokenizers (>=0.14,<0.19)", "torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm", "Pillow (>=10.0.1,<=15.0)", "optuna", "ray[tune] (>=2.7.0)", "sigopt", "timm", "torchvision", "codecarbon (==1.2.0)", "decord (==0.6.0)", "av (==9.2.0)"]
+audio = ["librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+codecarbon = ["codecarbon (==1.2.0)"]
+deepspeed = ["deepspeed (>=0.9.3)", "accelerate (>=0.21.0)"]
+deepspeed-testing = ["deepspeed (>=0.9.3)", "accelerate (>=0.21.0)", "pytest (>=7.2.0,<8.0.0)", "pytest-xdist", "timeout-decorator", "parameterized", "psutil", "datasets (!=2.5.0)", "dill (<0.3.5)", "evaluate (>=0.2.0)", "pytest-timeout", "ruff (==0.1.5)", "sacrebleu (>=1.4.12,<2.0.0)", "rouge-score (!=0.0.7,!=0.0.8,!=0.1,!=0.1.1)", "nltk", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "protobuf", "sacremoses", "rjieba", "beautifulsoup4", "tensorboard", "pydantic", "faiss-cpu", "cookiecutter (==1.7.3)", "optuna", "sentencepiece (>=0.1.91,!=0.1.92)"]
+dev = ["tensorflow (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)", "torch", "accelerate (>=0.21.0)", "jax (>=0.4.1,<=0.4.13)", "jaxlib (>=0.4.1,<=0.4.13)", "flax (>=0.4.1,<=0.7.0)", "optax (>=0.0.8,<=0.1.4)", "sentencepiece (>=0.1.91,!=0.1.92)", "protobuf", "tokenizers (>=0.14,<0.19)", "torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm", "Pillow (>=10.0.1,<=15.0)", "optuna", "ray[tune] (>=2.7.0)", "sigopt", "timm", "torchvision", "codecarbon (==1.2.0)", "decord (==0.6.0)", "av (==9.2.0)", "pytest (>=7.2.0,<8.0.0)", "pytest-xdist", "timeout-decorator", "parameterized", "psutil", "datasets (!=2.5.0)", "dill (<0.3.5)", "evaluate (>=0.2.0)", "pytest-timeout", "ruff (==0.1.5)", "sacrebleu (>=1.4.12,<2.0.0)", "rouge-score (!=0.0.7,!=0.0.8,!=0.1,!=0.1.1)", "nltk", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "sacremoses", "rjieba", "beautifulsoup4", "tensorboard", "pydantic", "faiss-cpu", "cookiecutter (==1.7.3)", "isort (>=5.5.4)", "urllib3 (<2.0.0)", "fugashi (>=1.0)", "ipadic (>=1.0.0,<2.0)", "unidic-lite (>=1.0.7)", "unidic (>=1.0.2)", "sudachipy (>=0.6.6)", "sudachidict-core (>=20220729)", "rhoknp (>=1.1.0,<1.3.1)", "hf-doc-builder", "scikit-learn"]
+dev-tensorflow = ["pytest (>=7.2.0,<8.0.0)", "pytest-xdist", "timeout-decorator", "parameterized", "psutil", "datasets (!=2.5.0)", "dill (<0.3.5)", "evaluate (>=0.2.0)", "pytest-timeout", "ruff (==0.1.5)", "sacrebleu (>=1.4.12,<2.0.0)", "rouge-score (!=0.0.7,!=0.0.8,!=0.1,!=0.1.1)", "nltk", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "protobuf", "sacremoses", "rjieba", "beautifulsoup4", "tensorboard", "pydantic", "faiss-cpu", "cookiecutter (==1.7.3)", "tensorflow (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)", "sentencepiece (>=0.1.91,!=0.1.92)", "tokenizers (>=0.14,<0.19)", "Pillow (>=10.0.1,<=15.0)", "isort (>=5.5.4)", "urllib3 (<2.0.0)", "hf-doc-builder", "scikit-learn", "onnxruntime (>=1.4.0)", "onnxruntime-tools (>=1.4.2)", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+dev-torch = ["pytest (>=7.2.0,<8.0.0)", "pytest-xdist", "timeout-decorator", "parameterized", "psutil", "datasets (!=2.5.0)", "dill (<0.3.5)", "evaluate (>=0.2.0)", "pytest-timeout", "ruff (==0.1.5)", "sacrebleu (>=1.4.12,<2.0.0)", "rouge-score (!=0.0.7,!=0.0.8,!=0.1,!=0.1.1)", "nltk", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "protobuf", "sacremoses", "rjieba", "beautifulsoup4", "tensorboard", "pydantic", "faiss-cpu", "cookiecutter (==1.7.3)", "torch", "accelerate (>=0.21.0)", "sentencepiece (>=0.1.91,!=0.1.92)", "tokenizers (>=0.14,<0.19)", "torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm", "Pillow (>=10.0.1,<=15.0)", "optuna", "ray[tune] (>=2.7.0)", "sigopt", "timm", "torchvision", "codecarbon (==1.2.0)", "isort (>=5.5.4)", "urllib3 (<2.0.0)", "fugashi (>=1.0)", "ipadic (>=1.0.0,<2.0)", "unidic-lite (>=1.0.7)", "unidic (>=1.0.2)", "sudachipy (>=0.6.6)", "sudachidict-core (>=20220729)", "rhoknp (>=1.1.0,<1.3.1)", "hf-doc-builder", "scikit-learn", "onnxruntime (>=1.4.0)", "onnxruntime-tools (>=1.4.2)"]
+docs = ["tensorflow (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)", "torch", "accelerate (>=0.21.0)", "jax (>=0.4.1,<=0.4.13)", "jaxlib (>=0.4.1,<=0.4.13)", "flax (>=0.4.1,<=0.7.0)", "optax (>=0.0.8,<=0.1.4)", "sentencepiece (>=0.1.91,!=0.1.92)", "protobuf", "tokenizers (>=0.14,<0.19)", "torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm", "Pillow (>=10.0.1,<=15.0)", "optuna", "ray[tune] (>=2.7.0)", "sigopt", "timm", "torchvision", "codecarbon (==1.2.0)", "decord (==0.6.0)", "av (==9.2.0)", "hf-doc-builder"]
+docs_specific = ["hf-doc-builder"]
+flax = ["jax (>=0.4.1,<=0.4.13)", "jaxlib (>=0.4.1,<=0.4.13)", "flax (>=0.4.1,<=0.7.0)", "optax (>=0.0.8,<=0.1.4)"]
+flax-speech = ["librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+ftfy = ["ftfy"]
+integrations = ["optuna", "ray[tune] (>=2.7.0)", "sigopt"]
+ja = ["fugashi (>=1.0)", "ipadic (>=1.0.0,<2.0)", "unidic-lite (>=1.0.7)", "unidic (>=1.0.2)", "sudachipy (>=0.6.6)", "sudachidict-core (>=20220729)", "rhoknp (>=1.1.0,<1.3.1)"]
+modelcreation = ["cookiecutter (==1.7.3)"]
+natten = ["natten (>=0.14.6,<0.15.0)"]
+onnx = ["onnxconverter-common", "tf2onnx", "onnxruntime (>=1.4.0)", "onnxruntime-tools (>=1.4.2)"]
+onnxruntime = ["onnxruntime (>=1.4.0)", "onnxruntime-tools (>=1.4.2)"]
+optuna = ["optuna"]
+quality = ["datasets (!=2.5.0)", "isort (>=5.5.4)", "ruff (==0.1.5)", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "urllib3 (<2.0.0)"]
+ray = ["ray[tune] (>=2.7.0)"]
+retrieval = ["faiss-cpu", "datasets (!=2.5.0)"]
+sagemaker = ["sagemaker (>=2.31.0)"]
+sentencepiece = ["sentencepiece (>=0.1.91,!=0.1.92)", "protobuf"]
+serving = ["pydantic", "uvicorn", "fastapi", "starlette"]
+sigopt = ["sigopt"]
+sklearn = ["scikit-learn"]
+speech = ["torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+testing = ["pytest (>=7.2.0,<8.0.0)", "pytest-xdist", "timeout-decorator", "parameterized", "psutil", "datasets (!=2.5.0)", "dill (<0.3.5)", "evaluate (>=0.2.0)", "pytest-timeout", "ruff (==0.1.5)", "sacrebleu (>=1.4.12,<2.0.0)", "rouge-score (!=0.0.7,!=0.0.8,!=0.1,!=0.1.1)", "nltk", "GitPython (<3.1.19)", "hf-doc-builder (>=0.3.0)", "protobuf", "sacremoses", "rjieba", "beautifulsoup4", "tensorboard", "pydantic", "faiss-cpu", "cookiecutter (==1.7.3)"]
+tf = ["tensorflow (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)"]
+tf-cpu = ["tensorflow-cpu (>=2.6,<2.16)", "onnxconverter-common", "tf2onnx", "tensorflow-text (<2.16)", "keras-nlp (>=0.3.1)"]
+tf-speech = ["librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+timm = ["timm"]
+tokenizers = ["tokenizers (>=0.14,<0.19)"]
+torch = ["torch", "accelerate (>=0.21.0)"]
+torch-speech = ["torchaudio", "librosa", "pyctcdecode (>=0.4.0)", "phonemizer", "kenlm"]
+torch-vision = ["torchvision", "Pillow (>=10.0.1,<=15.0)"]
+torchhub = ["filelock", "huggingface-hub (>=0.19.3,<1.0)", "importlib-metadata", "numpy (>=1.17)", "packaging (>=20.0)", "protobuf", "regex (!=2019.12.17)", "requests", "sentencepiece (>=0.1.91,!=0.1.92)", "torch", "tokenizers (>=0.14,<0.19)", "tqdm (>=4.27)"]
+video = ["decord (==0.6.0)", "av (==9.2.0)"]
+vision = ["Pillow (>=10.0.1,<=15.0)"]
+
+[[package]]
+name = "triton"
+version = "2.2.0"
+description = "A language and compiler for custom Deep Learning operations"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+filelock = "*"
+
+[package.extras]
+build = ["cmake (>=3.20)", "lit"]
+tests = ["autopep8", "flake8", "isort", "numpy", "pytest", "scipy (>=1.7.1)", "torch"]
+tutorials = ["matplotlib", "pandas", "tabulate", "torch"]
+
+[[package]]
+name = "typer"
+version = "0.9.0"
+description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+click = ">=7.1.1,<9.0.0"
+typing-extensions = ">=3.7.4.3"
+
+[package.extras]
+all = ["colorama (>=0.4.3,<0.5.0)", "shellingham (>=1.3.0,<2.0.0)", "rich (>=10.11.0,<14.0.0)"]
+dev = ["autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "pre-commit (>=2.17.0,<3.0.0)"]
+doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "mdx-include (>=1.4.1,<2.0.0)", "pillow (>=9.3.0,<10.0.0)", "cairosvg (>=2.5.2,<3.0.0)"]
+test = ["shellingham (>=1.3.0,<2.0.0)", "pytest (>=4.4.0,<8.0.0)", "pytest-cov (>=2.10.0,<5.0.0)", "coverage (>=6.2,<7.0)", "pytest-xdist (>=1.32.0,<4.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "mypy (==0.910)", "black (>=22.3.0,<23.0.0)", "isort (>=5.0.6,<6.0.0)", "rich (>=10.11.0,<14.0.0)"]
+
+[[package]]
+name = "typing-extensions"
+version = "4.9.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "typing-inspect"
+version = "0.9.0"
+description = "Runtime inspection utilities for typing module."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+mypy-extensions = ">=0.3.0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
+name = "unstructured"
+version = "0.12.6"
+description = "A library that prepares raw documents for downstream ML tasks."
+category = "main"
+optional = false
+python-versions = ">=3.9.0,<3.12"
+
+[package.dependencies]
+backoff = "2.2.1"
+beautifulsoup4 = "4.12.3"
+certifi = "2024.2.2"
+chardet = "5.2.0"
+charset-normalizer = "3.3.2"
+click = "8.1.7"
+dataclasses-json = "0.6.4"
+dataclasses-json-speakeasy = "0.5.11"
+emoji = "2.10.1"
+filetype = "1.2.0"
+idna = "3.6"
+joblib = "1.3.2"
+jsonpath-python = "1.0.6"
+langdetect = "1.0.9"
+lxml = "5.1.0"
+marshmallow = "3.20.2"
+mypy-extensions = "1.0.0"
+nltk = "3.8.1"
+numpy = "1.26.4"
+packaging = "23.2"
+python-dateutil = "2.8.2"
+python-iso639 = "2024.2.7"
+python-magic = "0.4.27"
+rapidfuzz = "3.6.1"
+regex = "2023.12.25"
+requests = "2.31.0"
+six = "1.16.0"
+soupsieve = "2.5"
+tabulate = "0.9.0"
+tqdm = "4.66.2"
+typing-extensions = "4.9.0"
+typing-inspect = "0.9.0"
+unstructured-client = "0.18.0"
+urllib3 = "1.26.18"
+wrapt = "1.16.0"
+
+[package.extras]
+airtable = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "inflection (==0.5.1)", "pyairtable (==2.2.2)", "pydantic (==1.10.14)", "requests (==2.31.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)"]
+all-docs = ["filelock (==3.13.1)", "pycocotools (==2.0.7)", "pypandoc (==1.12)", "humanfriendly (==10.0)", "certifi (==2024.2.2)", "pypdf (==4.0.1)", "pdfplumber (==0.10.4)", "requests (==2.31.0)", "rapidfuzz (==3.6.1)", "pdfminer-six (==20221105)", "safetensors (==0.3.2)", "msg-parser (==1.2.0)", "unstructured-inference (==0.7.23)", "cycler (==0.12.1)", "antlr4-python3-runtime (==4.9.3)", "wrapt (==1.16.0)", "openpyxl (==3.1.2)", "olefile (==0.47)", "lxml (==5.1.0)", "torch (==2.2.0)", "cryptography (==42.0.2)", "pikepdf (==8.11.0)", "packaging (==23.2)", "tokenizers (==0.15.2)", "deprecated (==1.2.14)", "zipp (==3.17.0)", "pyparsing (==3.0.9)", "numpy (==1.26.4)", "torchvision (==0.17.0)", "pycparser (==2.21)", "pytesseract (==0.3.10)", "pyyaml (==6.0.1)", "timm (==0.9.12)", "python-dateutil (==2.8.2)", "urllib3 (==1.26.18)", "python-pptx (==0.6.23)", "six (==1.16.0)", "transformers (==4.37.1)", "mpmath (==1.3.0)", "effdet (==0.4.1)", "markupsafe (==2.1.5)", "et-xmlfile (==1.1.0)", "omegaconf (==2.3.0)", "xlrd (==2.0.1)", "portalocker (==2.8.2)", "python-docx (==1.1.0)", "pdf2image (==1.17.0)", "pillow (==10.2.0)", "pillow-heif (==0.15.0)", "fonttools (==4.49.0)", "onnxruntime (==1.15.1)", "iopath (==0.1.10)", "tqdm (==4.66.2)", "idna (==3.6)", "xlsxwriter (==3.1.9)", "onnx (==1.15.0)", "tzdata (==2024.1)", "charset-normalizer (==3.3.2)", "scipy (==1.10.1)", "networkx (==3.2.1)", "protobuf (==4.23.4)", "typing-extensions (==4.9.0)", "fsspec (==2024.2.0)", "huggingface-hub (==0.20.3)", "cffi (==1.16.0)", "kiwisolver (==1.4.5)", "regex (==2023.12.25)", "matplotlib (==3.7.2)", "pandas (==2.2.0)", "importlib-metadata (==7.0.1)", "layoutparser[tesseract,layoutmodels] (==0.3.4)", "contourpy (==1.2.0)", "pypdfium2 (==4.27.0)", "opencv-python (==4.8.0.76)", "pytz (==2024.1)", "flatbuffers (==23.5.26)", "importlib-resources (==6.1.1)", "jinja2 (==3.1.3)", "python-multipart (==0.0.9)", "sympy (==1.12)", "markdown (==3.5.2)", "coloredlogs (==15.0.1)", "unstructured-pytesseract (==0.3.12)"]
+astra = ["anyio (==3.7.1)", "astrapy (==0.7.6)", "cassandra-driver (==3.29.0)", "cassio (==0.1.5)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "click (==8.1.7)", "deprecation (==2.1.0)", "exceptiongroup (==1.2.0)", "geomet (==0.2.1.post1)", "h11 (==0.14.0)", "h2 (==4.1.0)", "hpack (==4.0.0)", "httpcore (==1.0.4)", "httpx[http2] (==0.27.0)", "hyperframe (==6.0.1)", "idna (==3.6)", "numpy (==1.26.4)", "packaging (==23.2)", "requests (==2.31.0)", "six (==1.16.0)", "sniffio (==1.3.0)", "toml (==0.10.2)", "urllib3 (==1.26.18)"]
+azure = ["adlfs (==2024.2.0)", "aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "azure-core (==1.30.0)", "azure-datalake-store (==0.0.53)", "azure-identity (==1.15.0)", "azure-storage-blob (==12.19.0)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "frozenlist (==1.4.1)", "fsspec (==2024.2.0)", "idna (==3.6)", "isodate (==0.6.1)", "msal (==1.26.0)", "msal-extensions (==1.1.0)", "multidict (==6.0.5)", "packaging (==23.2)", "portalocker (==2.8.2)", "pycparser (==2.21)", "pyjwt[crypto] (==2.8.0)", "requests (==2.31.0)", "six (==1.16.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)", "yarl (==1.9.4)"]
+azure-cognitive-search = ["azure-common (==1.1.28)", "azure-core (==1.30.0)", "azure-search-documents (==11.4.0)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "isodate (==0.6.1)", "requests (==2.31.0)", "six (==1.16.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)"]
+bedrock = ["aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "anyio (==3.7.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "boto3 (==1.28.17)", "botocore (==1.31.17)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "dataclasses-json (==0.6.4)", "exceptiongroup (==1.2.0)", "frozenlist (==1.4.1)", "idna (==3.6)", "jmespath (==1.0.1)", "jsonpatch (==1.33)", "jsonpointer (==2.4)", "langchain-community (==0.0.20)", "langchain-core (==0.1.23)", "langsmith (==0.0.87)", "marshmallow (==3.20.2)", "multidict (==6.0.5)", "mypy-extensions (==1.0.0)", "numpy (==1.26.4)", "packaging (==23.2)", "pydantic (==1.10.14)", "python-dateutil (==2.8.2)", "pyyaml (==6.0.1)", "requests (==2.31.0)", "s3transfer (==0.6.2)", "six (==1.16.0)", "sniffio (==1.3.0)", "sqlalchemy (==2.0.27)", "tenacity (==8.2.3)", "typing-extensions (==4.9.0)", "typing-inspect (==0.9.0)", "urllib3 (==1.26.18)", "yarl (==1.9.4)"]
+biomed = ["beautifulsoup4 (==4.12.3)", "bs4 (==0.0.2)", "soupsieve (==2.5)"]
+box = ["attrs (==23.2.0)", "boxfs (==0.2.1)", "boxsdk[jwt] (==3.9.2)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "fsspec (==2024.2.0)", "idna (==3.6)", "pycparser (==2.21)", "pyjwt (==2.8.0)", "python-dateutil (==2.8.2)", "requests (==2.31.0)", "requests-toolbelt (==1.0.0)", "six (==1.16.0)", "urllib3 (==1.26.18)"]
+chroma = ["anyio (==3.7.1)", "asgiref (==3.7.2)", "backoff (==2.2.1)", "bcrypt (==4.1.2)", "build (==1.0.3)", "cachetools (==5.3.2)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "chroma-hnswlib (==0.7.3)", "chromadb (==0.4.22)", "click (==8.1.7)", "coloredlogs (==15.0.1)", "deprecated (==1.2.14)", "exceptiongroup (==1.2.0)", "fastapi (==0.109.2)", "filelock (==3.13.1)", "flatbuffers (==23.5.26)", "fsspec (==2024.2.0)", "google-auth (==2.28.0)", "googleapis-common-protos (==1.62.0)", "grpcio (==1.60.1)", "h11 (==0.14.0)", "httptools (==0.6.1)", "huggingface-hub (==0.20.3)", "humanfriendly (==10.0)", "idna (==3.6)", "importlib-metadata (==6.11.0)", "importlib-resources (==6.1.1)", "kubernetes (==29.0.0)", "mmh3 (==4.1.0)", "monotonic (==1.6)", "mpmath (==1.3.0)", "numpy (==1.26.4)", "oauthlib (==3.2.2)", "onnxruntime (==1.15.1)", "opentelemetry-api (==1.22.0)", "opentelemetry-exporter-otlp-proto-common (==1.22.0)", "opentelemetry-exporter-otlp-proto-grpc (==1.22.0)", "opentelemetry-instrumentation (==0.43b0)", "opentelemetry-instrumentation-asgi (==0.43b0)", "opentelemetry-instrumentation-fastapi (==0.43b0)", "opentelemetry-proto (==1.22.0)", "opentelemetry-sdk (==1.22.0)", "opentelemetry-semantic-conventions (==0.43b0)", "opentelemetry-util-http (==0.43b0)", "overrides (==7.7.0)", "packaging (==23.2)", "posthog (==3.4.1)", "protobuf (==4.23.4)", "pulsar-client (==3.4.0)", "pyasn1 (==0.5.1)", "pyasn1-modules (==0.3.0)", "pydantic (==1.10.14)", "pypika (==0.48.9)", "pyproject-hooks (==1.0.0)", "python-dateutil (==2.8.2)", "python-dotenv (==1.0.1)", "pyyaml (==6.0.1)", "requests (==2.31.0)", "requests-oauthlib (==1.3.1)", "rsa (==4.9)", "six (==1.16.0)", "sniffio (==1.3.0)", "starlette (==0.36.3)", "sympy (==1.12)", "tenacity (==8.2.3)", "tokenizers (==0.15.2)", "tomli (==2.0.1)", "tqdm (==4.66.2)", "typer (==0.9.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)", "uvicorn[standard] (==0.27.1)", "uvloop (==0.19.0)", "watchfiles (==0.21.0)", "websocket-client (==1.7.0)", "websockets (==12.0)", "wrapt (==1.16.0)", "zipp (==3.17.0)"]
+confluence = ["atlassian-python-api (==3.41.10)", "beautifulsoup4 (==4.12.3)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "deprecated (==1.2.14)", "idna (==3.6)", "jmespath (==1.0.1)", "oauthlib (==3.2.2)", "requests (==2.31.0)", "requests-oauthlib (==1.3.1)", "six (==1.16.0)", "soupsieve (==2.5)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)"]
+csv = ["numpy (==1.26.4)", "pandas (==2.2.0)", "python-dateutil (==2.8.2)", "pytz (==2024.1)", "six (==1.16.0)", "tzdata (==2024.1)"]
+databricks-volumes = ["cachetools (==5.3.2)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "databricks-sdk (==0.19.1)", "google-auth (==2.28.0)", "idna (==3.6)", "pyasn1 (==0.5.1)", "pyasn1-modules (==0.3.0)", "requests (==2.31.0)", "rsa (==4.9)", "urllib3 (==1.26.18)"]
+delta-table = ["deltalake (==0.15.3)", "fsspec (==2024.2.0)", "numpy (==1.26.4)", "pyarrow (==15.0.0)", "pyarrow-hotfix (==0.6)"]
+discord = ["aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "discord-py (==2.3.2)", "frozenlist (==1.4.1)", "idna (==3.6)", "multidict (==6.0.5)", "yarl (==1.9.4)"]
+doc = ["lxml (==5.1.0)", "python-docx (==1.1.0)", "typing-extensions (==4.9.0)"]
+docx = ["lxml (==5.1.0)", "python-docx (==1.1.0)", "typing-extensions (==4.9.0)"]
+dropbox = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "dropbox (==11.36.2)", "dropboxdrivefs (==1.3.1)", "fsspec (==2024.2.0)", "idna (==3.6)", "ply (==3.11)", "requests (==2.31.0)", "six (==1.16.0)", "stone (==3.3.1)", "urllib3 (==1.26.18)"]
+elasticsearch = ["certifi (==2024.2.2)", "elastic-transport (==8.12.0)", "elasticsearch (==8.12.0)", "urllib3 (==1.26.18)"]
+embed-huggingface = ["aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "anyio (==3.7.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "click (==8.1.7)", "dataclasses-json (==0.6.4)", "exceptiongroup (==1.2.0)", "filelock (==3.13.1)", "frozenlist (==1.4.1)", "fsspec (==2024.2.0)", "huggingface (==0.0.1)", "huggingface-hub (==0.20.3)", "idna (==3.6)", "jinja2 (==3.1.3)", "joblib (==1.3.2)", "jsonpatch (==1.33)", "jsonpointer (==2.4)", "langchain-community (==0.0.20)", "langchain-core (==0.1.23)", "langsmith (==0.0.87)", "markupsafe (==2.1.5)", "marshmallow (==3.20.2)", "mpmath (==1.3.0)", "multidict (==6.0.5)", "mypy-extensions (==1.0.0)", "networkx (==3.2.1)", "nltk (==3.8.1)", "numpy (==1.26.4)", "packaging (==23.2)", "pillow (==10.2.0)", "pydantic (==1.10.14)", "pyyaml (==6.0.1)", "regex (==2023.12.25)", "requests (==2.31.0)", "safetensors (==0.3.2)", "scikit-learn (==1.4.0)", "scipy (==1.10.1)", "sentence-transformers (==2.3.1)", "sentencepiece (==0.1.99)", "sniffio (==1.3.0)", "sqlalchemy (==2.0.27)", "sympy (==1.12)", "tenacity (==8.2.3)", "threadpoolctl (==3.3.0)", "tokenizers (==0.15.2)", "torch (==2.2.0)", "tqdm (==4.66.2)", "transformers (==4.37.1)", "typing-extensions (==4.9.0)", "typing-inspect (==0.9.0)", "urllib3 (==1.26.18)", "yarl (==1.9.4)"]
+epub = ["pypandoc (==1.12)"]
+gcs = ["aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "beautifulsoup4 (==4.12.3)", "bs4 (==0.0.2)", "cachetools (==5.3.2)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "decorator (==5.1.1)", "frozenlist (==1.4.1)", "fsspec (==2024.2.0)", "gcsfs (==2024.2.0)", "google-api-core (==2.17.1)", "google-auth (==2.28.0)", "google-auth-oauthlib (==1.2.0)", "google-cloud-core (==2.4.1)", "google-cloud-storage (==2.14.0)", "google-crc32c (==1.5.0)", "google-resumable-media (==2.7.0)", "googleapis-common-protos (==1.62.0)", "idna (==3.6)", "multidict (==6.0.5)", "oauthlib (==3.2.2)", "protobuf (==4.23.4)", "pyasn1 (==0.5.1)", "pyasn1-modules (==0.3.0)", "requests (==2.31.0)", "requests-oauthlib (==1.3.1)", "rsa (==4.9)", "soupsieve (==2.5)", "urllib3 (==1.26.18)", "yarl (==1.9.4)"]
+github = ["certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "deprecated (==1.2.14)", "idna (==3.6)", "pycparser (==2.21)", "pygithub (==2.2.0)", "pyjwt[crypto] (==2.8.0)", "pynacl (==1.5.0)", "requests (==2.31.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)"]
+gitlab = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "python-gitlab (==4.4.0)", "requests (==2.31.0)", "requests-toolbelt (==1.0.0)", "urllib3 (==1.26.18)"]
+google-drive = ["cachetools (==5.3.2)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "google-api-core (==2.17.1)", "google-api-python-client (==2.118.0)", "google-auth (==2.28.0)", "google-auth-httplib2 (==0.2.0)", "googleapis-common-protos (==1.62.0)", "httplib2 (==0.22.0)", "idna (==3.6)", "protobuf (==4.23.4)", "pyasn1 (==0.5.1)", "pyasn1-modules (==0.3.0)", "pyparsing (==3.0.9)", "requests (==2.31.0)", "rsa (==4.9)", "uritemplate (==4.1.1)", "urllib3 (==1.26.18)"]
+hubspot = ["certifi (==2024.2.2)", "hubspot-api-client (==8.2.1)", "python-dateutil (==2.8.2)", "six (==1.16.0)", "urllib3 (==1.26.18)"]
+huggingface = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "click (==8.1.7)", "filelock (==3.13.1)", "fsspec (==2024.2.0)", "huggingface-hub (==0.20.3)", "idna (==3.6)", "jinja2 (==3.1.3)", "joblib (==1.3.2)", "langdetect (==1.0.9)", "markupsafe (==2.1.5)", "mpmath (==1.3.0)", "networkx (==3.2.1)", "numpy (==1.26.4)", "packaging (==23.2)", "pyyaml (==6.0.1)", "regex (==2023.12.25)", "requests (==2.31.0)", "sacremoses (==0.1.1)", "safetensors (==0.3.2)", "sentencepiece (==0.1.99)", "six (==1.16.0)", "sympy (==1.12)", "tokenizers (==0.15.2)", "torch (==2.2.0)", "tqdm (==4.66.2)", "transformers (==4.37.1)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)"]
+image = ["antlr4-python3-runtime (==4.9.3)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "coloredlogs (==15.0.1)", "contourpy (==1.2.0)", "cryptography (==42.0.2)", "cycler (==0.12.1)", "deprecated (==1.2.14)", "effdet (==0.4.1)", "filelock (==3.13.1)", "flatbuffers (==23.5.26)", "fonttools (==4.49.0)", "fsspec (==2024.2.0)", "huggingface-hub (==0.20.3)", "humanfriendly (==10.0)", "idna (==3.6)", "importlib-resources (==6.1.1)", "iopath (==0.1.10)", "jinja2 (==3.1.3)", "kiwisolver (==1.4.5)", "layoutparser[tesseract,layoutmodels] (==0.3.4)", "lxml (==5.1.0)", "markupsafe (==2.1.5)", "matplotlib (==3.7.2)", "mpmath (==1.3.0)", "networkx (==3.2.1)", "numpy (==1.26.4)", "omegaconf (==2.3.0)", "onnx (==1.15.0)", "onnxruntime (==1.15.1)", "opencv-python (==4.8.0.76)", "packaging (==23.2)", "pandas (==2.2.0)", "pdf2image (==1.17.0)", "pdfminer-six (==20221105)", "pdfplumber (==0.10.4)", "pikepdf (==8.11.0)", "pillow (==10.2.0)", "pillow-heif (==0.15.0)", "portalocker (==2.8.2)", "protobuf (==4.23.4)", "pycocotools (==2.0.7)", "pycparser (==2.21)", "pyparsing (==3.0.9)", "pypdf (==4.0.1)", "pypdfium2 (==4.27.0)", "pytesseract (==0.3.10)", "python-dateutil (==2.8.2)", "python-multipart (==0.0.9)", "pytz (==2024.1)", "pyyaml (==6.0.1)", "rapidfuzz (==3.6.1)", "regex (==2023.12.25)", "requests (==2.31.0)", "safetensors (==0.3.2)", "scipy (==1.10.1)", "six (==1.16.0)", "sympy (==1.12)", "timm (==0.9.12)", "tokenizers (==0.15.2)", "torch (==2.2.0)", "torchvision (==0.17.0)", "tqdm (==4.66.2)", "transformers (==4.37.1)", "typing-extensions (==4.9.0)", "tzdata (==2024.1)", "unstructured-inference (==0.7.23)", "unstructured-pytesseract (==0.3.12)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)", "zipp (==3.17.0)"]
+jira = ["atlassian-python-api (==3.41.10)", "beautifulsoup4 (==4.12.3)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "deprecated (==1.2.14)", "idna (==3.6)", "jmespath (==1.0.1)", "oauthlib (==3.2.2)", "requests (==2.31.0)", "requests-oauthlib (==1.3.1)", "six (==1.16.0)", "soupsieve (==2.5)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)"]
+local-inference = ["filelock (==3.13.1)", "pycocotools (==2.0.7)", "pypandoc (==1.12)", "humanfriendly (==10.0)", "certifi (==2024.2.2)", "pypdf (==4.0.1)", "pdfplumber (==0.10.4)", "requests (==2.31.0)", "rapidfuzz (==3.6.1)", "pdfminer-six (==20221105)", "safetensors (==0.3.2)", "msg-parser (==1.2.0)", "unstructured-inference (==0.7.23)", "cycler (==0.12.1)", "antlr4-python3-runtime (==4.9.3)", "wrapt (==1.16.0)", "openpyxl (==3.1.2)", "olefile (==0.47)", "lxml (==5.1.0)", "torch (==2.2.0)", "cryptography (==42.0.2)", "pikepdf (==8.11.0)", "packaging (==23.2)", "tokenizers (==0.15.2)", "deprecated (==1.2.14)", "zipp (==3.17.0)", "pyparsing (==3.0.9)", "numpy (==1.26.4)", "torchvision (==0.17.0)", "pycparser (==2.21)", "pytesseract (==0.3.10)", "pyyaml (==6.0.1)", "timm (==0.9.12)", "python-dateutil (==2.8.2)", "urllib3 (==1.26.18)", "python-pptx (==0.6.23)", "six (==1.16.0)", "transformers (==4.37.1)", "mpmath (==1.3.0)", "effdet (==0.4.1)", "markupsafe (==2.1.5)", "et-xmlfile (==1.1.0)", "omegaconf (==2.3.0)", "xlrd (==2.0.1)", "portalocker (==2.8.2)", "python-docx (==1.1.0)", "pdf2image (==1.17.0)", "pillow (==10.2.0)", "pillow-heif (==0.15.0)", "fonttools (==4.49.0)", "onnxruntime (==1.15.1)", "iopath (==0.1.10)", "tqdm (==4.66.2)", "idna (==3.6)", "xlsxwriter (==3.1.9)", "onnx (==1.15.0)", "tzdata (==2024.1)", "charset-normalizer (==3.3.2)", "scipy (==1.10.1)", "networkx (==3.2.1)", "protobuf (==4.23.4)", "typing-extensions (==4.9.0)", "fsspec (==2024.2.0)", "huggingface-hub (==0.20.3)", "cffi (==1.16.0)", "kiwisolver (==1.4.5)", "regex (==2023.12.25)", "matplotlib (==3.7.2)", "pandas (==2.2.0)", "importlib-metadata (==7.0.1)", "layoutparser[tesseract,layoutmodels] (==0.3.4)", "contourpy (==1.2.0)", "pypdfium2 (==4.27.0)", "opencv-python (==4.8.0.76)", "pytz (==2024.1)", "flatbuffers (==23.5.26)", "importlib-resources (==6.1.1)", "jinja2 (==3.1.3)", "python-multipart (==0.0.9)", "sympy (==1.12)", "markdown (==3.5.2)", "coloredlogs (==15.0.1)", "unstructured-pytesseract (==0.3.12)"]
+md = ["importlib-metadata (==7.0.1)", "markdown (==3.5.2)", "zipp (==3.17.0)"]
+mongodb = ["dnspython (==2.5.0)", "pymongo (==4.6.1)"]
+msg = ["msg-parser (==1.2.0)", "olefile (==0.47)"]
+notion = ["anyio (==3.7.1)", "certifi (==2024.2.2)", "exceptiongroup (==1.2.0)", "h11 (==0.14.0)", "htmlbuilder (==1.0.0)", "httpcore (==1.0.3)", "httpx (==0.26.0)", "idna (==3.6)", "notion-client (==2.2.1)", "sniffio (==1.3.0)"]
+odt = ["lxml (==5.1.0)", "pypandoc (==1.12)", "python-docx (==1.1.0)", "typing-extensions (==4.9.0)"]
+onedrive = ["beautifulsoup4 (==4.12.3)", "bs4 (==0.0.2)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "idna (==3.6)", "msal (==1.26.0)", "office365-rest-python-client (==2.4.2)", "pycparser (==2.21)", "pyjwt[crypto] (==2.8.0)", "pytz (==2024.1)", "requests (==2.31.0)", "soupsieve (==2.5)", "urllib3 (==1.26.18)"]
+openai = ["aiohttp (==3.9.3)", "aiosignal (==1.3.1)", "anyio (==3.7.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "dataclasses-json (==0.6.4)", "distro (==1.9.0)", "exceptiongroup (==1.2.0)", "frozenlist (==1.4.1)", "h11 (==0.14.0)", "httpcore (==1.0.3)", "httpx (==0.26.0)", "idna (==3.6)", "jsonpatch (==1.33)", "jsonpointer (==2.4)", "langchain-community (==0.0.20)", "langchain-core (==0.1.23)", "langsmith (==0.0.87)", "marshmallow (==3.20.2)", "multidict (==6.0.5)", "mypy-extensions (==1.0.0)", "numpy (==1.26.4)", "openai (==1.12.0)", "packaging (==23.2)", "pydantic (==1.10.14)", "pyyaml (==6.0.1)", "regex (==2023.12.25)", "requests (==2.31.0)", "sniffio (==1.3.0)", "sqlalchemy (==2.0.27)", "tenacity (==8.2.3)", "tiktoken (==0.6.0)", "tqdm (==4.66.2)", "typing-extensions (==4.9.0)", "typing-inspect (==0.9.0)", "urllib3 (==1.26.18)", "yarl (==1.9.4)"]
+opensearch = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "opensearch-py (==2.4.2)", "python-dateutil (==2.8.2)", "requests (==2.31.0)", "six (==1.16.0)", "urllib3 (==1.26.18)"]
+org = ["pypandoc (==1.12)"]
+outlook = ["certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "idna (==3.6)", "msal (==1.26.0)", "office365-rest-python-client (==2.4.2)", "pycparser (==2.21)", "pyjwt[crypto] (==2.8.0)", "pytz (==2024.1)", "requests (==2.31.0)", "urllib3 (==1.26.18)"]
+paddleocr = ["attrdict (==2.0.1)", "babel (==2.14.0)", "bce-python-sdk (==0.9.4)", "blinker (==1.7.0)", "cachetools (==5.3.2)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "click (==8.1.7)", "contourpy (==1.2.0)", "cssselect (==1.2.0)", "cssutils (==2.9.0)", "cycler (==0.12.1)", "cython (==3.0.8)", "et-xmlfile (==1.1.0)", "flask (==3.0.2)", "flask-babel (==4.0.0)", "fonttools (==4.49.0)", "future (==0.18.3)", "idna (==3.6)", "imageio (==2.34.0)", "imgaug (==0.4.0)", "importlib-metadata (==7.0.1)", "importlib-resources (==6.1.1)", "itsdangerous (==2.1.2)", "jinja2 (==3.1.3)", "kiwisolver (==1.4.5)", "lanms-neo (==1.0.2)", "lazy-loader (==0.3)", "lmdb (==1.4.1)", "lxml (==5.1.0)", "markupsafe (==2.1.5)", "matplotlib (==3.7.2)", "networkx (==3.2.1)", "numpy (==1.26.4)", "opencv-contrib-python (==4.8.0.76)", "opencv-python (==4.8.0.76)", "openpyxl (==3.1.2)", "packaging (==23.2)", "pandas (==2.2.0)", "pdf2image (==1.17.0)", "pillow (==10.2.0)", "polygon3 (==3.0.9.1)", "premailer (==3.10.0)", "protobuf (==4.23.4)", "psutil (==5.9.8)", "pyclipper (==1.3.0.post5)", "pycryptodome (==3.20.0)", "pyparsing (==3.0.9)", "python-dateutil (==2.8.2)", "pytz (==2024.1)", "rapidfuzz (==3.6.1)", "rarfile (==4.1)", "requests (==2.31.0)", "scikit-image (==0.22.0)", "scipy (==1.10.1)", "shapely (==2.0.2)", "six (==1.16.0)", "tifffile (==2024.2.12)", "tqdm (==4.66.2)", "tzdata (==2024.1)", "unstructured-paddleocr (==2.6.1.3)", "urllib3 (==1.26.18)", "visualdl (==2.5.3)", "werkzeug (==3.0.1)", "zipp (==3.17.0)"]
+pdf = ["antlr4-python3-runtime (==4.9.3)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "coloredlogs (==15.0.1)", "contourpy (==1.2.0)", "cryptography (==42.0.2)", "cycler (==0.12.1)", "deprecated (==1.2.14)", "effdet (==0.4.1)", "filelock (==3.13.1)", "flatbuffers (==23.5.26)", "fonttools (==4.49.0)", "fsspec (==2024.2.0)", "huggingface-hub (==0.20.3)", "humanfriendly (==10.0)", "idna (==3.6)", "importlib-resources (==6.1.1)", "iopath (==0.1.10)", "jinja2 (==3.1.3)", "kiwisolver (==1.4.5)", "layoutparser[tesseract,layoutmodels] (==0.3.4)", "lxml (==5.1.0)", "markupsafe (==2.1.5)", "matplotlib (==3.7.2)", "mpmath (==1.3.0)", "networkx (==3.2.1)", "numpy (==1.26.4)", "omegaconf (==2.3.0)", "onnx (==1.15.0)", "onnxruntime (==1.15.1)", "opencv-python (==4.8.0.76)", "packaging (==23.2)", "pandas (==2.2.0)", "pdf2image (==1.17.0)", "pdfminer-six (==20221105)", "pdfplumber (==0.10.4)", "pikepdf (==8.11.0)", "pillow (==10.2.0)", "pillow-heif (==0.15.0)", "portalocker (==2.8.2)", "protobuf (==4.23.4)", "pycocotools (==2.0.7)", "pycparser (==2.21)", "pyparsing (==3.0.9)", "pypdf (==4.0.1)", "pypdfium2 (==4.27.0)", "pytesseract (==0.3.10)", "python-dateutil (==2.8.2)", "python-multipart (==0.0.9)", "pytz (==2024.1)", "pyyaml (==6.0.1)", "rapidfuzz (==3.6.1)", "regex (==2023.12.25)", "requests (==2.31.0)", "safetensors (==0.3.2)", "scipy (==1.10.1)", "six (==1.16.0)", "sympy (==1.12)", "timm (==0.9.12)", "tokenizers (==0.15.2)", "torch (==2.2.0)", "torchvision (==0.17.0)", "tqdm (==4.66.2)", "transformers (==4.37.1)", "typing-extensions (==4.9.0)", "tzdata (==2024.1)", "unstructured-inference (==0.7.23)", "unstructured-pytesseract (==0.3.12)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)", "zipp (==3.17.0)"]
+pinecone = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "dnspython (==2.5.0)", "idna (==3.6)", "loguru (==0.7.2)", "numpy (==1.26.4)", "pinecone-client (==2.2.4)", "python-dateutil (==2.8.2)", "pyyaml (==6.0.1)", "requests (==2.31.0)", "six (==1.16.0)", "tqdm (==4.66.2)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)"]
+postgres = ["psycopg2-binary (==2.9.9)"]
+ppt = ["lxml (==5.1.0)", "pillow (==10.2.0)", "python-pptx (==0.6.23)", "xlsxwriter (==3.1.9)"]
+pptx = ["lxml (==5.1.0)", "pillow (==10.2.0)", "python-pptx (==0.6.23)", "xlsxwriter (==3.1.9)"]
+qdrant = ["anyio (==3.7.1)", "certifi (==2024.2.2)", "exceptiongroup (==1.2.0)", "grpcio (==1.60.1)", "grpcio-tools (==1.60.1)", "h11 (==0.14.0)", "h2 (==4.1.0)", "hpack (==4.0.0)", "httpcore (==1.0.3)", "httpx[http2] (==0.26.0)", "hyperframe (==6.0.1)", "idna (==3.6)", "numpy (==1.26.4)", "portalocker (==2.8.2)", "protobuf (==4.23.4)", "pydantic (==1.10.14)", "qdrant-client (==1.7.3)", "sniffio (==1.3.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)"]
+reddit = ["certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "praw (==7.7.1)", "prawcore (==2.4.0)", "requests (==2.31.0)", "update-checker (==0.18.0)", "urllib3 (==1.26.18)", "websocket-client (==1.7.0)"]
+rst = ["pypandoc (==1.12)"]
+rtf = ["pypandoc (==1.12)"]
+s3 = ["aiobotocore (==2.7.0)", "aiohttp (==3.9.3)", "aioitertools (==0.11.0)", "aiosignal (==1.3.1)", "async-timeout (==4.0.3)", "attrs (==23.2.0)", "botocore (==1.31.17)", "frozenlist (==1.4.1)", "fsspec (==2024.2.0)", "idna (==3.6)", "jmespath (==1.0.1)", "multidict (==6.0.5)", "python-dateutil (==2.8.2)", "s3fs (==2024.2.0)", "six (==1.16.0)", "typing-extensions (==4.9.0)", "urllib3 (==1.26.18)", "wrapt (==1.16.0)", "yarl (==1.9.4)"]
+salesforce = ["attrs (==23.2.0)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "idna (==3.6)", "isodate (==0.6.1)", "lxml (==5.1.0)", "more-itertools (==10.2.0)", "pendulum (==3.0.0)", "platformdirs (==3.10.0)", "pycparser (==2.21)", "pyjwt (==2.8.0)", "python-dateutil (==2.8.2)", "pytz (==2024.1)", "requests (==2.31.0)", "requests-file (==2.0.0)", "requests-toolbelt (==1.0.0)", "simple-salesforce (==1.12.5)", "six (==1.16.0)", "time-machine (==2.13.0)", "tzdata (==2024.1)", "urllib3 (==1.26.18)", "zeep (==4.2.1)"]
+sftp = ["bcrypt (==4.1.2)", "cffi (==1.16.0)", "cryptography (==42.0.2)", "fsspec (==2024.2.0)", "paramiko (==3.4.0)", "pycparser (==2.21)", "pynacl (==1.5.0)"]
+sharepoint = ["certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "idna (==3.6)", "msal (==1.26.0)", "office365-rest-python-client (==2.4.2)", "pycparser (==2.21)", "pyjwt[crypto] (==2.8.0)", "pytz (==2024.1)", "requests (==2.31.0)", "urllib3 (==1.26.18)"]
+slack = ["slack-sdk (==3.27.0)"]
+tsv = ["numpy (==1.26.4)", "pandas (==2.2.0)", "python-dateutil (==2.8.2)", "pytz (==2024.1)", "six (==1.16.0)", "tzdata (==2024.1)"]
+weaviate = ["authlib (==1.3.0)", "certifi (==2024.2.2)", "cffi (==1.16.0)", "charset-normalizer (==3.3.2)", "cryptography (==42.0.2)", "idna (==3.6)", "pycparser (==2.21)", "requests (==2.31.0)", "urllib3 (==1.26.18)", "validators (==0.22.0)", "weaviate-client (==3.26.2)"]
+wikipedia = ["beautifulsoup4 (==4.12.3)", "certifi (==2024.2.2)", "charset-normalizer (==3.3.2)", "idna (==3.6)", "requests (==2.31.0)", "soupsieve (==2.5)", "urllib3 (==1.26.18)", "wikipedia (==1.4.0)"]
+xlsx = ["et-xmlfile (==1.1.0)", "networkx (==3.2.1)", "numpy (==1.26.4)", "openpyxl (==3.1.2)", "pandas (==2.2.0)", "python-dateutil (==2.8.2)", "pytz (==2024.1)", "six (==1.16.0)", "tzdata (==2024.1)", "xlrd (==2.0.1)"]
+
+[[package]]
+name = "unstructured-client"
+version = "0.18.0"
+description = "Python Client SDK for Unstructured API"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+certifi = ">=2023.7.22"
+charset-normalizer = ">=3.2.0"
+dataclasses-json-speakeasy = ">=0.5.11"
+idna = ">=3.4"
+jsonpath-python = ">=1.0.6"
+marshmallow = ">=3.19.0"
+mypy-extensions = ">=1.0.0"
+packaging = ">=23.1"
+python-dateutil = ">=2.8.2"
+requests = ">=2.31.0"
+six = ">=1.16.0"
+typing-extensions = ">=4.7.1"
+typing-inspect = ">=0.9.0"
+urllib3 = ">=1.26.18"
+
+[package.extras]
+dev = ["pylint (==2.16.2)"]
+
+[[package]]
+name = "urllib3"
+version = "1.26.18"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (==1.0.9)", "brotlipy (>=0.6.0)", "brotli (>=1.0.9)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "urllib3-secure-extra", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "uvicorn"
+version = "0.29.0"
+description = "The lightning-fast ASGI server."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+click = ">=7.0"
+colorama = {version = ">=0.4", optional = true, markers = "sys_platform == \"win32\" and extra == \"standard\""}
+h11 = ">=0.8"
+httptools = {version = ">=0.5.0", optional = true, markers = "extra == \"standard\""}
+python-dotenv = {version = ">=0.13", optional = true, markers = "extra == \"standard\""}
+pyyaml = {version = ">=5.1", optional = true, markers = "extra == \"standard\""}
+typing-extensions = {version = ">=4.0", markers = "python_version < \"3.11\""}
+uvloop = {version = ">=0.14.0,<0.15.0 || >0.15.0,<0.15.1 || >0.15.1", optional = true, markers = "sys_platform != \"win32\" and sys_platform != \"cygwin\" and platform_python_implementation != \"PyPy\" and extra == \"standard\""}
+watchfiles = {version = ">=0.13", optional = true, markers = "extra == \"standard\""}
+websockets = {version = ">=10.4", optional = true, markers = "extra == \"standard\""}
+
+[package.extras]
+standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.4)"]
+
+[[package]]
+name = "uvloop"
+version = "0.19.0"
+description = "Fast implementation of asyncio event loop on top of libuv"
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+
+[package.extras]
+docs = ["Sphinx (>=4.1.2,<4.2.0)", "sphinxcontrib-asyncio (>=0.3.0,<0.4.0)", "sphinx-rtd-theme (>=0.5.2,<0.6.0)"]
+test = ["flake8 (>=5.0,<6.0)", "psutil", "pycodestyle (>=2.9.0,<2.10.0)", "pyOpenSSL (>=23.0.0,<23.1.0)", "mypy (>=0.800)", "Cython (>=0.29.36,<0.30.0)", "aiohttp (>=3.8.1)", "aiohttp (==3.9.0b0)"]
+
+[[package]]
+name = "watchfiles"
+version = "0.21.0"
+description = "Simple, modern and high performance file watching and code reload in python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+anyio = ">=3.0.0"
+
+[[package]]
+name = "wcwidth"
+version = "0.2.13"
+description = "Measures the displayed width of unicode strings in a terminal"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "websocket-client"
+version = "1.7.0"
+description = "WebSocket client for Python with low level API options"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["Sphinx (>=6.0)", "sphinx-rtd-theme (>=1.1.0)"]
+optional = ["python-socks", "wsaccel"]
+test = ["websockets"]
+
+[[package]]
+name = "websockets"
+version = "12.0"
+description = "An implementation of the WebSocket Protocol (RFC 6455 & 7692)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "wrapt"
+version = "1.16.0"
+description = "Module for decorators, wrappers and monkey patching."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "yarl"
+version = "1.9.4"
+description = "Yet another URL library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+idna = ">=2.0"
+multidict = ">=4.0"
+
+[[package]]
+name = "zipp"
+version = "3.18.1"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff (>=0.2.1)", "jaraco.itertools", "jaraco.functools", "more-itertools", "big-o", "pytest-ignore-flaky", "pytest-mypy"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = ">=3.10,<3.12"
+content-hash = "1bbdaf41acac8f74ef007eda8754da22ed6b46dc27ae47c6df539bcde0ccfe37"
+
+[metadata.files]
+aiohttp = []
+aiosignal = []
+annotated-types = []
+anyio = []
+asgiref = []
+async-timeout = []
+atomicwrites = []
+attrs = []
+backoff = []
+bcrypt = []
+beautifulsoup4 = []
+build = []
+cachetools = []
+certifi = []
+chardet = []
+charset-normalizer = []
+chroma-hnswlib = []
+chromadb = []
+click = []
+colorama = []
+coloredlogs = []
+dataclasses-json = []
+dataclasses-json-speakeasy = []
+deprecated = []
+emoji = []
+exceptiongroup = []
+fastapi = []
+filelock = []
+filetype = []
+flatbuffers = []
+frozenlist = []
+fsspec = []
+google-auth = []
+googleapis-common-protos = []
+greenlet = []
+grpcio = []
+h11 = []
+httptools = []
+huggingface-hub = []
+humanfriendly = []
+idna = []
+importlib-metadata = []
+importlib-resources = []
+jinja2 = []
+joblib = []
+jsonpatch = []
+jsonpath-python = []
+jsonpointer = []
+kubernetes = []
+langchain = []
+langchain-community = []
+langchain-core = []
+langchain-experimental = []
+langchain-text-splitters = []
+langdetect = []
+langsmith = []
+lxml = []
+markdown = []
+markupsafe = []
+marshmallow = []
+mmh3 = []
+monotonic = []
+more-itertools = []
+mpmath = []
+multidict = []
+mypy-extensions = []
+networkx = []
+nltk = []
+numpy = []
+nvidia-cublas-cu12 = []
+nvidia-cuda-cupti-cu12 = []
+nvidia-cuda-nvrtc-cu12 = []
+nvidia-cuda-runtime-cu12 = []
+nvidia-cudnn-cu12 = []
+nvidia-cufft-cu12 = []
+nvidia-curand-cu12 = []
+nvidia-cusolver-cu12 = []
+nvidia-cusparse-cu12 = []
+nvidia-nccl-cu12 = []
+nvidia-nvjitlink-cu12 = []
+nvidia-nvtx-cu12 = []
+oauthlib = []
+onnxruntime = []
+opentelemetry-api = []
+opentelemetry-exporter-otlp-proto-common = []
+opentelemetry-exporter-otlp-proto-grpc = []
+opentelemetry-instrumentation = []
+opentelemetry-instrumentation-asgi = []
+opentelemetry-instrumentation-fastapi = []
+opentelemetry-proto = []
+opentelemetry-sdk = []
+opentelemetry-semantic-conventions = []
+opentelemetry-util-http = []
+orjson = []
+overrides = []
+packaging = []
+pillow = []
+pluggy = []
+posthog = []
+protobuf = []
+pulsar-client = []
+py = []
+pyasn1 = []
+pyasn1-modules = []
+pydantic = []
+pydantic-core = []
+pypika = []
+pyproject-hooks = []
+pyreadline3 = []
+pytest = []
+python-dateutil = []
+python-dotenv = []
+python-iso639 = []
+python-magic = []
+pyyaml = []
+rapidfuzz = []
+regex = []
+requests = []
+requests-oauthlib = []
+rsa = []
+safetensors = []
+scikit-learn = []
+scipy = []
+sentence-transformers = []
+six = []
+sniffio = []
+soupsieve = []
+sqlalchemy = []
+starlette = []
+sympy = []
+tabulate = []
+tenacity = []
+threadpoolctl = []
+tokenizers = []
+tomli = []
+torch = []
+tqdm = []
+transformers = []
+triton = []
+typer = []
+typing-extensions = []
+typing-inspect = []
+unstructured = []
+unstructured-client = []
+urllib3 = []
+uvicorn = []
+uvloop = []
+watchfiles = []
+wcwidth = []
+websocket-client = []
+websockets = []
+wrapt = []
+yarl = []
+zipp = []

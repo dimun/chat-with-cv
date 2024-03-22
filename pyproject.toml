@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "chat-with-cv"
+version = "0.1.0"
+description = ""
+authors = ["Diego Fernando Muñoz <dgmzcrrls@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+chromadb = "^0.4.24"
+sentence-transformers = "^2.5.1"
+langchain = "^0.1.13"
+fastapi = "^0.110.0"
+langchain-community = "^0.0.29"
+langchain-experimental = "^0.0.55"
+unstructured = "^0.12.6"
+Markdown = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+uvicorn = "^0.29.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
